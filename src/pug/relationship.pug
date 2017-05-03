@@ -1,0 +1,46 @@
+extends _layout-modal
+
+block content
+
+	.popup.popup_red
+		.popup__inner.w745
+			.popup__head
+				.popup-img
+					img(src="img/logo-business.png", alt="")
+			.popup__body
+				.popup__content.popup__content_mg_mid
+					.popup__title.popup__title_left заявка на сотрудничество
+						span.icon-envelope.icon-envelope_red
+					.popup__form
+						form.form
+							.form__cols
+								.form__col
+									.form__row
+										label.form__label(for="name") Ф.И.О.
+										input.form__input(type="text", id="name" )
+									.form__row
+										label.form__label(for="email") E-mail
+										input.form__input(type="email", id="email" )
+									.form__row
+										label.form__label(for="city") Город
+										select.form__select.js-select(id="city", style="width: 100%", placeholder='Выберите город')
+											option(value='city1') Город1
+											option(value='city2') Город2
+											option(value='city3') Город3
+											option(value='city4') Город4
+								.form__col
+									.form__row
+										label.form__label(for="phone") Телефон
+										input.form__input(type="text", id="phone" )
+									.form__row
+										label.form__label(for="comment") Добавьте комментарий
+										textarea.form__textarea(id="comment", name="comment" )
+				.popup__footer.popup__footer_pad_mid.popup__footer_white
+					.popup__nav 
+						button.popup__nav-btn.popup__btn_fl_l.step_next.js-step_next(type='button') 
+							span.popup__nav-img
+								span.icon-arrow-left
+							span.popup__nav-text вернуться назад
+						button.popup__nav-btn.popup__btn.popup__btn_fl_r(type='submit') 
+							span.icon-sun
+							span ОТПРАВИТЬ

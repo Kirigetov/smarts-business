@@ -1,0 +1,52 @@
+.select2-search
+	display: none
+
+.select2-container--default 
+	.select2-selection--single 
+		.select2-selection__clear
+			display: none
+
+.select2-container 
+	.select2-selection--single
+		height: 44px 
+		border: 1px solid #cbcbcb
+		border-radius: 6px
+
+.select2-container--default 
+	.select2-selection--single 
+		.select2-selection__rendered
+			font-size: 18px
+			line-height: 44px 
+
+.select2-container--default 
+	.select2-selection--single 
+		.select2-selection__arrow 
+			top: 7px
+			right: 11px
+
+.select2-container--default 
+	.select2-selection--single 
+		.select2-selection__arrow 
+			b
+				border-width: 9px 5px 0 5px
+				border-color: #cc2b23 transparent transparent transparent
+
+.select2-container--default
+	&.select2-container--open 
+		.select2-selection--single 
+			.select2-selection__arrow 
+				b
+					border-width: 0 5px 9px 5px 
+					border-color: transparent transparent #cc2b23  transparent
+
+.select2-dropdown
+	border: 1px solid #cbcbcb
+	border-radius: 6px
+
+.select2-container--default 
+	.select2-results__option--highlighted[aria-selected]
+		background-color: #CC2B23 
+
+.select2-results__option
+	&:last-child
+		border-radius: 0 0 6px 6px

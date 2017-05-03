@@ -1,0 +1,29 @@
+extends _layout-modal
+
+block content
+
+	.popup.popup_red
+		.popup__inner.w370
+			.popup__head
+				.popup-img
+					img(src="img/logo-business.png", alt="")
+			.popup__body
+				.popup-error-msg
+					.popup-error-msg__icon.icon-stop
+					.popup-error-msg__text ПОЛЬЗОВАТЕЛЬ С ТАКИМ НОМЕРОМ НЕ НАЙДЕН ИЛИ ЗАБЛОКИРОВАН
+				.popup__content
+					.popup__title.popup__title_mb_lg авторизуйтесь для доступа
+					.popup__form
+						form.form
+							.form__row
+								label.form__label(for="phone-number") Введите Ваш номер телефона
+								input.form__input.js-phone-number(type="text", id="phone-number", placeholder='+38 (0__ )___-__-__')
+							.form__row.clr
+								button.popup__btn.popup__btn_fl_r.popup__btn_key(type="submit") 
+									span.icon-key
+									span Вход
+				.popup__footer
+					a.popup-info(href="")
+						span.popup-info__icon.icon-envelope
+						span.popup-info__msg 
+							| Заявка на сотрудничество
