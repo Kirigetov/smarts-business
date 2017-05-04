@@ -1,0 +1,23 @@
+extends _layout
+
+block content
+
+  .header-wrap
+    .container
+      //- begin header
+      .header
+        .header__logo.logo
+          img(src='img/logo-business.png', alt='logo')
+        .header__menu
+          nav.nav
+            .nav__item
+              a.nav__link(href='', title='') 
+                span 
+                  +s('manager')
+              
+              .nav__dropdown
+                .sub-nav
+                  .sub-nav__list
+                    .sub-nav__item
+                      span.sub-nav__item-type 
+                      span.sub-nav__item-data
