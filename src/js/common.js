@@ -51,7 +51,7 @@ $(document).ready(function() {
 			}
 		});
 	}
-
+ 
     // function switchSidebarTab() {
         
     //     document.on('click', $('.js-tabs-link'), function(e) {
@@ -77,6 +77,18 @@ $(document).ready(function() {
     //         //   content.hide();
     //         // }
     // }
+    
+    // quantity
+    $('.js-quantity').jqxNumberInput({
+        spinButtons: true,
+        inputMode: 'advanced',
+        digits: 3,
+        decimalDigits: 0,
+        min: 0,
+        promptChar: "",
+        width: 50,
+        height: "25px"
+    });
 
     (function init() {
 	   initSubmenuToggle();

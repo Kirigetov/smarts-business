@@ -63,7 +63,7 @@ block content
               input.search__input(type='text', placeholder='Поиск...') 
 
           .header__basket
-            .basket
+            .basket.is-open
               .basket__row
                 .basket__img.icon-bag
                 .basket__value 2 позиции 
@@ -86,21 +86,41 @@ block content
                         tr
                           th.order__thead ФОТО
                           th.order__thead НАЗВАНИЕ / КОД
-                          th.order__thead КОЛ-ВО
-                          th.order__thead ЦЕНА
-                          th.order__thead ИТОГО 
+                          th.order__thead.align-left КОЛ-ВО
+                          th.order__thead.align-left ЦЕНА
+                          th.order__thead.align-left ИТОГО 
                         tr
                           td
                             .order__img-wrap
                               img(src='img/product.jpg', alt='')
-                          td
-                            .order__product   
-                              .order__product-title ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE
+                          td.align-left
+                            .order__product
+                              a.order__product-title(href='', title='') ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE
                               .order__product-code КОД ТОВАРА: TLG12345
+                          td.align-left
+                            .order__quantity.align-left.js-quantity 
+                          td.order__values.align-left.order__price 25 099 ГРН.
+                          td.order__values.align-left.order__sum 50 198 ГРН.
+                        tr
                           td
-                            .order__quantity
-                          td.order__values.order__price 25 099 ГРН.
-                          td.order__values.order__sum 50 198 ГРН.
+                            .order__img-wrap
+                              img(src='img/product.jpg', alt='')
+                          td.align-left
+                            .order__product
+                              a.order__product-title(href='', title='') ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE
+                              .order__product-code КОД ТОВАРА: TLG12345
+                          td.align-left
+                            .order__quantity.align-left.js-quantity 
+                          td.order__values.align-left.order__price 12 198 ГРН.
+                          td.order__values.align-left.order__sum 12 198 ГРН.
+
+                      .order__row
+                        .order__all-sum
+                          span.order__all-sum-text ИТОГО
+                          span.order__all-sum-value 95 125 ГРН.
+
+                      .order__row
+                          button.order__submit(type='submit') ОФОРМИТЬ ЗАКАЗ
 
   .container
     .l-main

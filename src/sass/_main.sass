@@ -208,14 +208,17 @@
     &__img
         margin-right: 10px 
     &__text
-        font-size: 9px
-        +bold
-        color: #FFF 
+        font-size: 11px
+        color: #fefefe
+        +rm
     &__link
         position: relative
         display: inline-block
         padding-right: 15px 
+        font-size: 9px
+        font-family: Arial, sans-serif 
         color: #FFF 
+        +bold
         &:after
             content: "" 
             position: absolute
@@ -228,18 +231,33 @@
             border-top: 4px solid #f3db0e 
 
 .order
+    +clr
     &__table
         width: 100% 
+        margin-bottom: 15px
+    tr
+        &:first-child
+            td
+                padding: 20px 0 10px 
+    td
+        vertical-align: middle
+        padding: 10px
+        border-bottom: 1px solid #f4f4f4
+        &.align-left
+            text-align: left
     &__thead
         padding: 10px 
         background-color: #f4f4f4
         color: #333
         font-size: 10px
+        &.align-left
+            text-align: left
         &:first-child
             border-radius: 4px 0 0 4px
         &:last-child
             border-radius: 0 4px 4px 0 
-    &__img-wrap
+    &__img-wrap 
+        margin: 0 auto 
         height: 47px 
         width: 47px 
         border: 1px solid #ddd
@@ -247,14 +265,7 @@
             width: auto 
             max-width: 100% 
             height: 100% 
-    tr
-        &:first-child
-            td
-                padding: 20px 0 10px 
-    td
-        vertical-align: middle
-        padding: 10px 0
-        border-bottom: 1px solid #f4f4f4
+            
     &__product  
         text-align: left
         &-title, &-code
@@ -263,11 +274,42 @@
         &-title
             color: #cc2b23
             font-size: 13px
+            text-decoration: none
+            &:hover
+                text-decoration: underline    
         &-code
             color: #333
             font-size: 10px
-    &__quantity
     &__values
         color: #333
         font-size: 13px
         +bold
+    &__all-sum
+        float: right
+        display: inline-block
+        padding: 13px 20px 
+        background-color: #f4f4f4
+        white-space: nowrap
+        &-text, &-value
+            display: inline-block
+            font-size: 19px
+            +bold
+            color: #333
+            text-transform: uppercase
+        &-text
+            margin-right: 10px
+
+    &__submit
+        float: right
+        height: 25px 
+        line-height: 25px
+        padding: 0 17px
+        background-color: #376c2c
+        border-radius: 4px
+        font-size: 10px
+        +bold
+        color: #FFF 
+    &__row
+        +clr
+        &:not(:last-child)
+            margin-bottom: 15px

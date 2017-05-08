@@ -55,7 +55,7 @@
                 </form>
               </div>
               <div class="header__basket">
-                <div class="basket">
+                <div class="basket is-open">
                   <div class="basket__row">
                     <div class="basket__img icon-bag"></div>
                     <div class="basket__value">2 позиции </div>
@@ -78,27 +78,47 @@
                             <tr>
                               <th class="order__thead">ФОТО</th>
                               <th class="order__thead">НАЗВАНИЕ / КОД</th>
-                              <th class="order__thead">КОЛ-ВО</th>
-                              <th class="order__thead">ЦЕНА</th>
-                              <th class="order__thead">ИТОГО </th>
+                              <th class="order__thead align-left">КОЛ-ВО</th>
+                              <th class="order__thead align-left">ЦЕНА</th>
+                              <th class="order__thead align-left">ИТОГО </th>
                             </tr>
                             <tr>
                               <td>
                                 <div class="order__img-wrap"><img src="img/product.jpg" alt=""></div>
                               </td>
-                              <td>
-                                <div class="order__product">  
-                                  <div class="order__product-title">ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE</div>
+                              <td class="align-left">
+                                <div class="order__product"><a class="order__product-title" href="" title="">ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE</a>
                                   <div class="order__product-code">КОД ТОВАРА: TLG12345</div>
                                 </div>
                               </td>
-                              <td>
-                                <div class="order__quantity"></div>
+                              <td class="align-left">
+                                <div class="order__quantity align-left js-quantity"> </div>
                               </td>
-                              <td class="order__values order__price">25 099 ГРН.</td>
-                              <td class="order__values order__sum">50 198 ГРН.</td>
+                              <td class="order__values align-left order__price">25 099 ГРН.</td>
+                              <td class="order__values align-left order__sum">50 198 ГРН.</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="order__img-wrap"><img src="img/product.jpg" alt=""></div>
+                              </td>
+                              <td class="align-left">
+                                <div class="order__product"><a class="order__product-title" href="" title="">ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE</a>
+                                  <div class="order__product-code">КОД ТОВАРА: TLG12345</div>
+                                </div>
+                              </td>
+                              <td class="align-left">
+                                <div class="order__quantity align-left js-quantity"> </div>
+                              </td>
+                              <td class="order__values align-left order__price">12 198 ГРН.</td>
+                              <td class="order__values align-left order__sum">12 198 ГРН.</td>
                             </tr>
                           </table>
+                          <div class="order__row">
+                            <div class="order__all-sum"><span class="order__all-sum-text">ИТОГО</span><span class="order__all-sum-value">95 125 ГРН.</span></div>
+                          </div>
+                          <div class="order__row">
+                            <button class="order__submit" type="submit">ОФОРМИТЬ ЗАКАЗ</button>
+                          </div>
                         </div>
                       </div>
                     </div>
