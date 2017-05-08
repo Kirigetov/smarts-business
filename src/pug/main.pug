@@ -6,18 +6,222 @@ block content
     .container
       //- begin header
       .header
-        .header__logo.logo
-          img(src='img/logo-business.png', alt='logo')
-        .header__menu
-          nav.nav
-            .nav__item
-              a.nav__link(href='', title='') 
-                span 
-                  +s('manager')
-              
-              .nav__dropdown
-                .sub-nav
-                  .sub-nav__list
-                    .sub-nav__item
-                      span.sub-nav__item-type 
-                      span.sub-nav__item-data
+        .header__section.header__section_left
+          .header__logo.logo
+            a(href='', title='')
+              img(src='img/logo-business.png', alt='logo')
+          .header__menu
+            nav.nav
+              .nav__item
+                a.nav__link(href='', title='') 
+                  span.nav__link-img.icon-manager
+                  span.nav__link-text ВАШ МЕНЕДЖЕР
+                .nav__dropdown
+                  ul.sub-nav
+                    li.sub-nav__item
+                      span.sub-nav__type Имя: 
+                      span.sub-nav__data Греков Роман 
+                    li.sub-nav__item
+                      span.sub-nav__type Телефон: 
+                      span.sub-nav__data 0669263171
+                    li.sub-nav__item
+                      span.sub-nav__type E-mail: 
+                      span.sub-nav__data r.grekov@telemart.com.ua 
+                    li.sub-nav__item
+                      span.sub-nav__type Skype: 
+                      span.sub-nav__data g.r.e.c.h.a 
+              .nav__item
+                a.nav__link(href='', title='') 
+                  span.nav__link-img.icon-dollar
+                  span.nav__link-text ФИНАНСЫ
+                .nav__dropdown
+                  ul.sub-nav
+                    li.sub-nav__item
+                      span.sub-nav__type Курс USD: 
+                      span.sub-nav__data.sub-nav__data_bold 26.80/26.80
+                    li.sub-nav__item
+                      span.sub-nav__type Сверка: 
+                      a.sub-nav__link(href='', title='') скачать
+              .nav__item
+                a.nav__link(href='', title='') 
+                  span.nav__link-img.icon-cabinet
+                  span.nav__link-text МОЙ КАБИНЕТ
+                .nav__dropdown
+                  ul.sub-nav
+                    li.sub-nav__item
+                      a.sub-nav__link(href='', title='') Буряк М.В.
+                    li.sub-nav__item
+                      a.sub-nav__link(href='', title='') Мои заказы
+                  a.nav__dropdown-exit(href='', title='') 
+                    span Выйти
+                    span.icon-exit
+
+        .header__section.header__section_right
+          .header__search
+            form.search
+              button(type='button').search__btn.icon-search search
+              input.search__input(type='text', placeholder='Поиск...') 
+
+          .header__basket
+            .basket
+              .basket__row
+                .basket__img.icon-bag
+                .basket__value 2 позиции 
+              .basket__row
+                .basket__sum 93 939 грн.
+
+              .popup-bl.popup-bl-basket.w775
+                .popup-bl__inner
+                  .popup-bl__head
+                    .popup-bl__title Состав Вашего заказа
+                    .popup-bl__user.user-auth
+                      .user-auth__img
+                        img(src='img/user.png', title='')
+                      .user-auth__text
+                        span Вы зашли как: 
+                        a.user-auth__link(href='', title='') Буряк М.В.
+                  .popup-bl__body
+                    .order
+                      table.order__table
+                        tr
+                          th.order__thead ФОТО
+                          th.order__thead НАЗВАНИЕ / КОД
+                          th.order__thead КОЛ-ВО
+                          th.order__thead ЦЕНА
+                          th.order__thead ИТОГО 
+                        tr
+                          td
+                            .order__img-wrap
+                              img(src='img/product.jpg', alt='')
+                          td
+                            .order__product   
+                              .order__product-title ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE
+                              .order__product-code КОД ТОВАРА: TLG12345
+                          td
+                            .order__quantity
+                          td.order__values.order__price 25 099 ГРН.
+                          td.order__values.order__sum 50 198 ГРН.
+
+  .container
+    .l-main
+      .l-col1
+        .sidebar 
+          .s-tabs.js-sidebar-tabs
+            .s-tabs__links
+              .s-tabs__item.js-tabs-item
+                a.s-tabs__link.js-tabs-link.is-active(href='', title='') Каталог
+              .s-tabs__item.js-tabs-item
+                a.s-tabs__link.js-tabs-link(href='', title='') Фильтры
+            .s-tabs__content.is-active
+              .s-filters
+                .s-filter
+                  .s-filter__title.js-nav-link 
+                    span Смартфоны
+                    span.s-filter__arrow.icon-chevron
+                  ul.s-filter__list.js-navdrop
+                    - var values = [ "VR очки", "Наушники", "Экшн-камеры", "Электротранспорт",  "VR очки" ]
+                    each item in values
+                      li.s-filter__item
+                       a.s-filter__link(href='', title='')= item
+                .s-filter
+                  .s-filter__title.js-nav-link 
+                    span Планшеты 
+                    span.s-filter__arrow.icon-chevron
+                  ul.s-filter__list.js-navdrop
+                    - var values = [ "VR очки", "Наушники", "Экшн-камеры", "Электротранспорт",  "VR очки" ]
+                    each item in values
+                      li.s-filter__item
+                       a.s-filter__link(href='', title='')= item
+                .s-filter
+                  .s-filter__title.js-nav-link 
+                    span Гаджеты 
+                    span.s-filter__arrow.icon-chevron
+                  ul.s-filter__list.js-navdrop
+                    - var values = [ "VR очки", "Наушники", "Экшн-камеры", "Электротранспорт",  "VR очки" ]
+                    each item in values
+                      li.s-filter__item
+                       a.s-filter__link(href='', title='')= item
+                .s-filter
+                  .s-filter__title.js-nav-link 
+                    span Техника Apple 
+                    span.s-filter__arrow.icon-chevron
+                  ul.s-filter__list.js-navdrop
+                    - var values = [ "VR очки", "Наушники", "Экшн-камеры", "Электротранспорт",  "VR очки" ]
+                    each item in values
+                      li.s-filter__item
+                       a.s-filter__link(href='', title='')= item
+                .s-filter
+                  .s-filter__title.js-nav-link 
+                    span Пункт меню
+                    span.s-filter__arrow.icon-chevron
+                  ul.s-filter__list.js-navdrop
+                    - var values = [ "VR очки", "Наушники", "Экшн-камеры", "Электротранспорт",  "VR очки" ]
+                    each item in values
+                      li.s-filter__item
+                       a.s-filter__link(href='', title='')= item
+                .s-filter
+                  .s-filter__title.js-nav-link 
+                    span Пункт меню
+                    span.s-filter__arrow.icon-chevron
+                  ul.s-filter__list.js-navdrop
+                    - var values = [ "VR очки", "Наушники", "Экшн-камеры", "Электротранспорт",  "VR очки" ]
+                    each item in values
+                      li.s-filter__item
+                       a.s-filter__link(href='', title='')= item
+                .s-filter
+                  .s-filter__title.js-nav-link 
+                    span Пункт меню
+                    span.s-filter__arrow.icon-chevron
+                  ul.s-filter__list.js-navdrop
+                    - var values = [ "VR очки", "Наушники", "Экшн-камеры", "Электротранспорт",  "VR очки" ]
+                    each item in values
+                      li.s-filter__item
+                       a.s-filter__link(href='', title='')= item
+
+            .s-tabs__content
+      .l-col2
+        section.content-section
+          h2.title-h2 ИНФОРМАЦИЯ ПО ОПЛАТЕ
+
+          table.pay-table
+            tr
+              td.pay-table__title ДОЛГ
+              td.pay-table__title ПРОСРОЧКА
+              td.pay-table__title(colspan="4") ОПЛАТА
+            tr
+              td.pay-table__subtitle.empty-cell
+              td.pay-table__subtitle.empty-cell
+              td.pay-table__subtitle Сегодня
+              td.pay-table__subtitle Завтра
+              td.pay-table__subtitle 25.04
+              td.pay-table__subtitle 26.04
+            tr
+              td.pay-table__data 26.04
+              td.pay-table__data -
+              td.pay-table__data -
+              td.pay-table__data -
+              td.pay-table__data -
+              td.pay-table__data 600
+
+        section.content-section
+          h2.title-h2 СООБЩЕНИЯ 
+
+          .news-wrap
+            .news
+              .news-tile
+                a.news-tile__inner(href='', title='')
+                  .news-tile__img-wrap
+                    img(src='img/news1.jpg', alt='')
+                  .news-tile__body
+                    .news-tile__head
+                      .news-tile__title Apple iPhone 7 RED доступен
+                    .news-tile__text Рады сообщить, что с 24 апреля 2017 года доступен для заказов Apple iPhone 7 и Apple iPhone 7 PLUS в версии RED. Количество ограничено! Забирайте уже сейчас с гарантией возврата!
+
+              .news-tile
+                a.news-tile__inner(href='', title='')
+                  .news-tile__img-wrap
+                    img(src='img/news2.jpg', alt='')
+                  .news-tile__body
+                    .news-tile__head
+                      .news-tile__title Новые наушники HOCO M2
+                    .news-tile__text Новая поставка наушников HOCO M2. Мощный звук, качественная сборка, отличная цена! Широкий цветовой диапазон и глубокие басы! Вот что отличает новинку от обычных наушников. Стоит попробовать их!

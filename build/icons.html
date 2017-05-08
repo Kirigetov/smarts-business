@@ -94,20 +94,23 @@
       -moz-osx-font-smoothing: grayscale;
     }
     
-    .icon-arrow-left:before {
+    .icon-arrow-down:before {
       content: "\EA01";
     }
-    .icon-envelope:before {
+    .icon-arrow-left:before {
       content: "\EA02";
     }
-    .icon-key:before {
+    .icon-envelope:before {
       content: "\EA03";
     }
-    .icon-stop:before {
+    .icon-key:before {
       content: "\EA04";
     }
-    .icon-sun:before {
+    .icon-stop:before {
       content: "\EA05";
+    }
+    .icon-sun:before {
+      content: "\EA06";
     }
   </style>
 </head>
@@ -122,8 +125,16 @@
   <ul class="icons-list">
     
     <li class="icon-box">
-      <input class="icon-class-name autoselect" type="text" value=".icon-arrow-left" readonly>
+      <input class="icon-class-name autoselect" type="text" value=".icon-arrow-down" readonly>
       <input class="icon-unicode autoselect" type="text" value="\EA01" readonly>
+      <div class="icon-container">
+        <i class="icon icon-arrow-down"></i>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-arrow-left" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA02" readonly>
       <div class="icon-container">
         <i class="icon icon-arrow-left"></i>
       </div>
@@ -131,7 +142,7 @@
     
     <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-envelope" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA02" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA03" readonly>
       <div class="icon-container">
         <i class="icon icon-envelope"></i>
       </div>
@@ -139,7 +150,7 @@
     
     <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-key" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA03" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA04" readonly>
       <div class="icon-container">
         <i class="icon icon-key"></i>
       </div>
@@ -147,7 +158,7 @@
     
     <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-stop" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA04" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA05" readonly>
       <div class="icon-container">
         <i class="icon icon-stop"></i>
       </div>
@@ -155,7 +166,7 @@
     
     <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-sun" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA05" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA06" readonly>
       <div class="icon-container">
         <i class="icon icon-sun"></i>
       </div>

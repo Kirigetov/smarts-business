@@ -1,0 +1,108 @@
+// sidebar
+.sidebar
+	width: 260px
+
+.s-tabs
+	&__links
+		margin-bottom: 10px
+		font-size: 0
+	&__item
+		display: inline-block
+		vertical-align: top
+		width: 50% 
+	&__link
+		display: block
+		height: 32px
+		line-height: 32px 
+		padding: 0 10px 
+		font-size: 16px
+		text-transform: uppercase
+		text-decoration: none
+		text-align: center
+		color: #cc2b23 
+		border-radius: 5px
+		&.is-active
+			background-color: #cc2b23
+			color: #FFF
+	&__content
+		display: none
+		&.is-active
+			display: block 
+
+.s-filter
+	&:not(:first-child)
+		border-top: 1px solid #ecf1f5
+	&__title
+		position: relative
+		font-size: 14px
+		line-height: 24px
+		cursor: pointer
+		&.is-active
+			.icon-chevron
+				+s('chevron-up')
+	&__title, &__link
+		height: 50px 
+		line-height: 50px
+		padding: 0 20px
+		+bold
+		color: #32394d
+	&__list, &__sub-list, &__sub-list-2
+		padding: 10px 0
+	&__list
+		display: none
+		background-color: #f9fafb
+		.s-filter__arrow
+			right: 40px
+		&.is-active
+			display: block
+	&__sub-list
+		display: none
+		background-color: #ededed
+		.s-filter__link
+			padding-left: 65px
+		.s-filter__arrow
+			right: 40px
+		&.is-active
+			display: block
+	&__sub-list-2
+		display: none
+		background-color: #e0e0e0
+		.s-filter__link
+			padding-left: 80px
+		.s-filter__arrow
+			right: 40px
+		&.is-active
+			display: block
+	&__link
+		position: relative
+		display: block
+		padding-left: 40px 
+		text-decoration: none
+		font-size: 12px
+		&:active
+			color: #32394d
+		&:hover
+			background-color: darken(#e0e0e0, 5%)
+		&.is-active
+			color: #cc2b23
+			.icon-chevron
+				+s('chevron-up')
+	&__checkbox
+		padding-left: 40px 
+	&__tags-list
+		padding: 0 14px 0 20px
+	&__tag
+		display: inline-block
+		vertical-align: top
+		margin-right: 6px
+		margin-bottom: 12px
+	&__arrow
+		position: absolute
+		top: 50%
+		right: 20px 
+		margin-top: -1px
+
+		  
+
+.icon-chevron
+	+s('chevron-down')
