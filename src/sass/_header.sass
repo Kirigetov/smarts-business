@@ -1,8 +1,12 @@
 // header
 .header-container
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 1000
     background-color: #cc2b23
-    margin-bottom: 30px
-
+    
 .header
     font-size: 0
     display: flex
@@ -72,6 +76,7 @@
         position: absolute
         top: 100%
         min-width: 100% 
+        z-index: 5 
         transition: opacity 0.15s, visibility 0.15s 
         
     &__dropdown-exit
@@ -165,6 +170,13 @@
         width: 100% 
         background-image: linear-gradient(to top, #c9d4de 0%, #f5f6f7 20%, white 100%)
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
+    &__btn
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: 100 
     &__row
         position: relative
         &_mb
@@ -183,7 +195,7 @@
         font-size: 16px
         font-weight: 700
         color: #383838
-    &.is-open
+    &.is-active
         .popup-bl-basket
             display: block
 

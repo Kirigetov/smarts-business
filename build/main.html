@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Jade Layout Template</title>
+    <title>Главная страница</title>
     <meta name="viewport" content="initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" media="all" href="css/style.css">
@@ -10,17 +10,17 @@
   </head>
   <body>
     <!--BEGIN out-->
-    <div class="out">
+    <div class="out out_pad_top">
       <div class="main-container">
         <div class="header-container">
           <div class="container">
-            <div class="header">
+            <div class="header js-header">
               <div class="header__section header__section_left">
                 <div class="header__logo logo"><a href="" title=""><img src="img/logo-business.png" alt="logo"></a></div>
                 <div class="header__menu">
                   <nav class="nav">
-                    <div class="nav__item"><a class="nav__link" href="" title=""> <span class="nav__link-img icon-manager"></span><span class="nav__link-text">ВАШ МЕНЕДЖЕР</span></a>
-                      <div class="nav__dropdown">
+                    <div class="nav__item"><a class="nav__link js-toggle-item" href="" title=""> <span class="nav__link-img icon-manager"></span><span class="nav__link-text">ВАШ МЕНЕДЖЕР</span></a>
+                      <div class="nav__dropdown js-toggle-drop">
                         <ul class="sub-nav">
                           <li class="sub-nav__item"><span class="sub-nav__type">Имя: </span><span class="sub-nav__data">Греков Роман </span></li>
                           <li class="sub-nav__item"><span class="sub-nav__type">Телефон: </span><span class="sub-nav__data">0669263171</span></li>
@@ -29,16 +29,16 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="nav__item"><a class="nav__link" href="" title=""> <span class="nav__link-img icon-dollar"></span><span class="nav__link-text">ФИНАНСЫ</span></a>
-                      <div class="nav__dropdown">
+                    <div class="nav__item"><a class="nav__link js-toggle-item" href="" title=""> <span class="nav__link-img icon-dollar"></span><span class="nav__link-text">ФИНАНСЫ</span></a>
+                      <div class="nav__dropdown js-toggle-drop">
                         <ul class="sub-nav">
                           <li class="sub-nav__item"><span class="sub-nav__type">Курс USD: </span><span class="sub-nav__data sub-nav__data_bold">26.80/26.80</span></li>
                           <li class="sub-nav__item"><span class="sub-nav__type">Сверка: </span><a class="sub-nav__link" href="" title="">скачать</a></li>
                         </ul>
                       </div>
                     </div>
-                    <div class="nav__item"><a class="nav__link" href="" title=""> <span class="nav__link-img icon-cabinet"></span><span class="nav__link-text">МОЙ КАБИНЕТ</span></a>
-                      <div class="nav__dropdown">
+                    <div class="nav__item"><a class="nav__link js-toggle-item" href="" title=""> <span class="nav__link-img icon-cabinet"></span><span class="nav__link-text">МОЙ КАБИНЕТ</span></a>
+                      <div class="nav__dropdown js-toggle-drop">
                         <ul class="sub-nav">
                           <li class="sub-nav__item"><a class="sub-nav__link" href="" title="">Буряк М.В.</a></li>
                           <li class="sub-nav__item"><a class="sub-nav__link" href="" title="">Мои заказы</a></li>
@@ -56,7 +56,8 @@
                   </form>
                 </div>
                 <div class="header__basket">
-                  <div class="basket is-open">
+                  <div class="basket">
+                    <div class="basket__btn js-drop-popup"></div>
                     <div class="basket__row basket__row_mb">
                       <div class="basket__img icon-bag"></div>
                       <div class="basket__value">2 позиции </div>
@@ -64,7 +65,7 @@
                     <div class="basket__row">
                       <div class="basket__sum">93 939 грн.</div>
                     </div>
-                    <div class="popup-bl popup-bl-basket w776">
+                    <div class="popup-bl popup-bl-basket w776 js-toggle-drop">
                       <div class="popup-bl__inner">
                         <div class="popup-bl__head">
                           <div class="popup-bl__title">Состав Вашего заказа</div>
@@ -133,87 +134,367 @@
         <div class="container">
           <div class="l-main">
             <div class="l-col1">
-              <div class="sidebar"> 
+              <div class="sidebar">
                 <div class="s-tabs js-sidebar-tabs">
-                  <div class="s-tabs__links">
-                    <div class="s-tabs__item js-tabs-item"><a class="s-tabs__link js-tabs-link is-active" href="" title="">Каталог</a></div>
-                    <div class="s-tabs__item js-tabs-item"><a class="s-tabs__link js-tabs-link" href="" title="">Фильтры</a></div>
-                  </div>
-                  <div class="s-tabs__content is-active">
-                    <div class="s-filters">
-                      <div class="s-filter">
-                        <div class="s-filter__title js-nav-link"> <span>Смартфоны</span><span class="s-filter__arrow icon-chevron"></span></div>
-                        <ul class="s-filter__list js-navdrop">
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Наушники</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Экшн-камеры</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Электротранспорт</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
-                        </ul>
+                  <ul class="s-tabs__links">
+                    <li class="s-tabs__item js-tabs-item is-active"><a class="s-tabs__link" href="" title="">Каталог</a></li>
+                    <li class="s-tabs__item js-tabs-item"><a class="s-tabs__link" href="" title="">Фильтры</a></li>
+                  </ul>
+                  <div class="s-tabs__body js-scroll-sidebar">
+                    <div class="s-tabs__content js-tabs-content">
+                      <div class="s-filters">
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Смартфоны</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop">
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Наушники</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Экшн-камеры</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Электротранспорт</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
+                          </ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Планшеты </span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop">
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Наушники</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Экшн-камеры</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Электротранспорт</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
+                          </ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Гаджеты </span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop">
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Наушники</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Экшн-камеры</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Электротранспорт</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
+                          </ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Техника Apple </span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop">
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Наушники</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Экшн-камеры</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Электротранспорт</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
+                          </ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Пункт меню</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop">
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Наушники</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Экшн-камеры</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Электротранспорт</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
+                          </ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Пункт меню</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop">
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Наушники</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Экшн-камеры</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Электротранспорт</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
+                          </ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Пункт меню</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop">
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Наушники</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Экшн-камеры</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Электротранспорт</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
+                          </ul>
+                        </div>
                       </div>
-                      <div class="s-filter">
-                        <div class="s-filter__title js-nav-link"> <span>Планшеты </span><span class="s-filter__arrow icon-chevron"></span></div>
-                        <ul class="s-filter__list js-navdrop">
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Наушники</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Экшн-камеры</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Электротранспорт</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
-                        </ul>
-                      </div>
-                      <div class="s-filter">
-                        <div class="s-filter__title js-nav-link"> <span>Гаджеты </span><span class="s-filter__arrow icon-chevron"></span></div>
-                        <ul class="s-filter__list js-navdrop">
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Наушники</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Экшн-камеры</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Электротранспорт</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
-                        </ul>
-                      </div>
-                      <div class="s-filter">
-                        <div class="s-filter__title js-nav-link"> <span>Техника Apple </span><span class="s-filter__arrow icon-chevron"></span></div>
-                        <ul class="s-filter__list js-navdrop">
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Наушники</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Экшн-камеры</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Электротранспорт</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
-                        </ul>
-                      </div>
-                      <div class="s-filter">
-                        <div class="s-filter__title js-nav-link"> <span>Пункт меню</span><span class="s-filter__arrow icon-chevron"></span></div>
-                        <ul class="s-filter__list js-navdrop">
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Наушники</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Экшн-камеры</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Электротранспорт</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
-                        </ul>
-                      </div>
-                      <div class="s-filter">
-                        <div class="s-filter__title js-nav-link"> <span>Пункт меню</span><span class="s-filter__arrow icon-chevron"></span></div>
-                        <ul class="s-filter__list js-navdrop">
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Наушники</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Экшн-камеры</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Электротранспорт</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
-                        </ul>
-                      </div>
-                      <div class="s-filter">
-                        <div class="s-filter__title js-nav-link"> <span>Пункт меню</span><span class="s-filter__arrow icon-chevron"></span></div>
-                        <ul class="s-filter__list js-navdrop">
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Наушники</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Экшн-камеры</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">Электротранспорт</a></li>
-                          <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
-                        </ul>
+                    </div>
+                    <div class="s-tabs__content js-tabs-content">
+                      <div class="s-filters">
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Модель</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop">
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Apple iPhone 7</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Apple iPhone 7 Plus</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Doogee X5 Max/X5 Max Pro</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Doogee X5/X5s/X5 Pro</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Huawei Y6 II</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Huawei Y5II</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Huawei Honor 5C</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Huawei P9</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Lenovo A1000</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Lenovo A2010</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Lenovo Vibe C</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Meizu M3s</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Meizu MX6</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Meizu M3 Note</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Meizu M3</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Meizu PRO 6</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung Galaxy A3 2016</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung Galaxy A5 2016</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung Galaxy A7 2016</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung Galaxy J1 2016</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung Galaxy J1 mini 2016</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung Galaxy J3 2016</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung Galaxy J5 2016</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung Galaxy J7 2016</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung Galaxy S7 edge G935</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung Galaxy S7 G930</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Xiaomi Redmi 3s/3 Pro</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Xiaomi Redmi Note 3</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Xiaomi Mi Max</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Xiaomi Mi5</span>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Производитель</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop">
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Apple</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">DIGI</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Doogee</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Golla</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">HTC</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Lenovo</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">LG</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Melkco</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Nillkin</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Nokia</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">ODOYO</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Ozaki</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">RED POINT</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">SGP</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">SOX</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Tucano</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">VOIA</span>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Сортировать</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop">
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">по популярности</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">только новинки</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">от дешевых к дорогим</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">от дорогих к дешевым</span>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="s-tabs__content"></div>
                 </div><a class="price-list" href="" title=""><span class="price-list__img icon-price"></span><span class="price-list__title">Скачать прайс-лист</span></a>
               </div>
             </div>

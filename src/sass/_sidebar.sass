@@ -12,6 +12,10 @@
 		display: inline-block
 		vertical-align: top
 		width: 50% 
+		&.is-active
+			.s-tabs__link
+				background-color: #cc2b23
+				color: #FFF
 	&__link
 		display: block
 		height: 32px
@@ -23,13 +27,11 @@
 		text-align: center
 		color: #cc2b23 
 		border-radius: 5px
-		&.is-active
-			background-color: #cc2b23
-			color: #FFF
-	&__content
-		display: none
-		&.is-active
-			display: block 
+	&__body
+		position: relative
+		max-height: 680px
+		overflow: hidden
+		padding-right: 15px 
 
 .s-filter
 	&:not(:first-child)
@@ -53,6 +55,8 @@
 	&__list
 		display: none
 		background-color: #f9fafb
+		&_checkbox
+			padding-left: 40px
 		.s-filter__arrow
 			right: 40px
 		&.is-active
@@ -89,8 +93,7 @@
 			color: #cc2b23
 			.icon-chevron
 				+s('chevron-up')
-	&__checkbox
-		padding-left: 40px 
+
 	&__tags-list
 		padding: 0 14px 0 20px
 	&__tag

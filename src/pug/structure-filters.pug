@@ -1,682 +1,695 @@
 extends _layout
 
+block title
+      title Структура фильтров
+
 block content
   .sidebar-holder(style='display: inline-block; margin-bottom: 40px; vertical-align: top;' )
     h2(style='text-align: center; margin-bottom: 30px;') Apple
     .sidebar 
-      .s-tabs
-        .s-tabs__links
-          .s-tabs__item.js-tabs-item
-            a.s-tabs__link.is-active.js-tabs-link(href='', title='') Каталог
-          .s-tabs__item.js-tabs-item
-            a.s-tabs__link.js-tabs-link(href='', title='') Фильтры
-        .s-tabs__content.is-active
-          .s-filters
-            .s-filter
-              .s-filter__title.js-nav-link 
-                span Apple
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                li.s-filter__item
-                  a.s-filter__link.js-subnav-link(href='', title='') Iphone
-                    span.s-filter__arrow.icon-chevron
-                  ul.s-filter__sub-list.js-subnav-drop
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Iphone 4
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') iPhone 5/5s/SE
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') IPhone 6/6s
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') iPhone 6 plus/6s plus
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') iPhone 7 
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') iPhone 7 plus
-                    li.s-filter__item
-                      a.s-filter__link.js-subnav-link(href='', title='') Аксессуары
-                        span.s-filter__arrow.icon-chevron
-                      ul.s-filter__sub-list-2.js-subnav-drop
-                        li.s-filter__item
-                          a.s-filter__link(href='', title='') Чехлы и накладки
-                        li.s-filter__item
-                          a.s-filter__link(href='', title='') Защитные стекла
-                        li.s-filter__item
-                          a.s-filter__link(href='', title='') Кабеля
-                        li.s-filter__item
-                          a.s-filter__link(href='', title='') Зарядные устройства
-                        li.s-filter__item
-                          a.s-filter__link(href='', title='') Дополнительная память
+      .s-tabs.js-sidebar-tabs
+        ul.s-tabs__links
+          li.s-tabs__item.is-active.js-tabs-item
+            a.s-tabs__link(href='', title='') Каталог
+          li.s-tabs__item.js-tabs-item
+            a.s-tabs__link(href='', title='') Фильтры
+        .s-tabs__body
+          .s-tabs__content.js-tabs-content
+            .s-filters
+              .s-filter
+                .s-filter__title.js-nav-link 
+                  span Apple
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.js-navdrop
+                  li.s-filter__item
+                    a.s-filter__link.js-subnav-link(href='', title='') Iphone
+                      span.s-filter__arrow.icon-chevron
+                    ul.s-filter__sub-list.js-subnav-drop
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Iphone 4
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') iPhone 5/5s/SE
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') IPhone 6/6s
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') iPhone 6 plus/6s plus
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') iPhone 7 
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') iPhone 7 plus
+                      li.s-filter__item
+                        a.s-filter__link.js-subnav-link(href='', title='') Аксессуары
+                          span.s-filter__arrow.icon-chevron
+                        ul.s-filter__sub-list-2.js-subnav-drop
+                          li.s-filter__item
+                            a.s-filter__link(href='', title='') Чехлы и накладки
+                          li.s-filter__item
+                            a.s-filter__link(href='', title='') Защитные стекла
+                          li.s-filter__item
+                            a.s-filter__link(href='', title='') Кабеля
+                          li.s-filter__item
+                            a.s-filter__link(href='', title='') Зарядные устройства
+                          li.s-filter__item
+                            a.s-filter__link(href='', title='') Дополнительная память
 
-                li.s-filter__item
-                  a.s-filter__link.js-subnav-link(href='', title='') Ipad
-                    span.s-filter__arrow.icon-chevron
-                  ul.s-filter__sub-list.js-subnav-drop
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Air
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Air 2
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Mini 2 / Mini 3
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Mini 4
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Pro 9,7
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Pro 12,9
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') iPad 2017
-                    li.s-filter__item
-                      a.s-filter__link.js-subnav-link(href='', title='') Аксессуары
-                        span.s-filter__arrow.icon-chevron
-                      ul.s-filter__sub-list-2.js-subnav-drop
-                        li.s-filter__item
-                          a.s-filter__link(href='', title='') Чехлы и накладки
-                        li.s-filter__item
-                          a.s-filter__link(href='', title='') Защитные стекла
-                        li.s-filter__item
-                          a.s-filter__link(href='', title='') Кабеля
-                        li.s-filter__item
-                          a.s-filter__link(href='', title='') Зарядные устройства
-                        li.s-filter__item
-                          a.s-filter__link(href='', title='') Дополнительная память
-                li.s-filter__item
-                  a.s-filter__link.js-subnav-link(href='', title='') MacBook
-                    span.s-filter__arrow.icon-chevron
-                  ul.s-filter__sub-list.js-subnav-drop
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Air 11
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Air 13
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Pro 13
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Pro 15
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Pro 13 Touch Bar
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Pro 15 Touch Bar
-                    li.s-filter__item
-                      a.s-filter__link.js-subnav-link(href='', title='') Аксессуары
-                        span.s-filter__arrow.icon-chevron
-                      ul.s-filter__sub-list-2.js-subnav-drop
-                        li.s-filter__item
-                          a.s-filter__link(href='', title='') Чехлы
-                        li.s-filter__item
-                          a.s-filter__link(href='', title='') Накладки и скины
-                        li.s-filter__item
-                          a.s-filter__link(href='', title='') Наклейки
-                        li.s-filter__item
-                          a.s-filter__link(href='', title='') Зарядные устройства
-                        li.s-filter__item
-                          a.s-filter__link(href='', title='') Мышки
-                        li.s-filter__item
-                          a.s-filter__link(href='', title='') Клавиатуры
-                li.s-filter__item
-                  a.s-filter__link.js-subnav-link(href='', title='') Гаджеты Apple
-                    span.s-filter__arrow.icon-chevron
-                  ul.s-filter__sub-list.js-subnav-drop
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Apple TV
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') iPencil
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Mouse
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Magic Keyboard
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Magic TrackPad
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') AirPort
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') AirPods
-                li.s-filter__item
-                  a.s-filter__link.js-subnav-link(href='', title='') Apple Watch
-                    span.s-filter__arrow.icon-chevron
-                  ul.s-filter__sub-list.js-subnav-drop
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Ремешки
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Кабеля
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Подставки и док-станции
-                    li.s-filter__item
-                      a.s-filter__link(href='', title='') Защитные стекла
+                  li.s-filter__item
+                    a.s-filter__link.js-subnav-link(href='', title='') Ipad
+                      span.s-filter__arrow.icon-chevron
+                    ul.s-filter__sub-list.js-subnav-drop
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Air
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Air 2
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Mini 2 / Mini 3
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Mini 4
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Pro 9,7
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Pro 12,9
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') iPad 2017
+                      li.s-filter__item
+                        a.s-filter__link.js-subnav-link(href='', title='') Аксессуары
+                          span.s-filter__arrow.icon-chevron
+                        ul.s-filter__sub-list-2.js-subnav-drop
+                          li.s-filter__item
+                            a.s-filter__link(href='', title='') Чехлы и накладки
+                          li.s-filter__item
+                            a.s-filter__link(href='', title='') Защитные стекла
+                          li.s-filter__item
+                            a.s-filter__link(href='', title='') Кабеля
+                          li.s-filter__item
+                            a.s-filter__link(href='', title='') Зарядные устройства
+                          li.s-filter__item
+                            a.s-filter__link(href='', title='') Дополнительная память
+                  li.s-filter__item
+                    a.s-filter__link.js-subnav-link(href='', title='') MacBook
+                      span.s-filter__arrow.icon-chevron
+                    ul.s-filter__sub-list.js-subnav-drop
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Air 11
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Air 13
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Pro 13
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Pro 15
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Pro 13 Touch Bar
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Pro 15 Touch Bar
+                      li.s-filter__item
+                        a.s-filter__link.js-subnav-link(href='', title='') Аксессуары
+                          span.s-filter__arrow.icon-chevron
+                        ul.s-filter__sub-list-2.js-subnav-drop
+                          li.s-filter__item
+                            a.s-filter__link(href='', title='') Чехлы
+                          li.s-filter__item
+                            a.s-filter__link(href='', title='') Накладки и скины
+                          li.s-filter__item
+                            a.s-filter__link(href='', title='') Наклейки
+                          li.s-filter__item
+                            a.s-filter__link(href='', title='') Зарядные устройства
+                          li.s-filter__item
+                            a.s-filter__link(href='', title='') Мышки
+                          li.s-filter__item
+                            a.s-filter__link(href='', title='') Клавиатуры
+                  li.s-filter__item
+                    a.s-filter__link.js-subnav-link(href='', title='') Гаджеты Apple
+                      span.s-filter__arrow.icon-chevron
+                    ul.s-filter__sub-list.js-subnav-drop
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Apple TV
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') iPencil
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Mouse
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Magic Keyboard
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Magic TrackPad
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') AirPort
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') AirPods
+                  li.s-filter__item
+                    a.s-filter__link.js-subnav-link(href='', title='') Apple Watch
+                      span.s-filter__arrow.icon-chevron
+                    ul.s-filter__sub-list.js-subnav-drop
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Ремешки
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Кабеля
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Подставки и док-станции
+                      li.s-filter__item
+                        a.s-filter__link(href='', title='') Защитные стекла
 
   .sidebar-holder(style='display: inline-block; margin-bottom: 40px; vertical-align: top;')
     h2(style='text-align: center; margin-bottom: 30px;') Чехлы+
     .sidebar 
-      .s-tabs
-        .s-tabs__links
-          .s-tabs__item
+      .s-tabs.js-sidebar-tabs
+        ul.s-tabs__links
+          li.s-tabs__item.js-tabs-item
             a.s-tabs__link(href='', title='') Каталог
-          .s-tabs__item
-            a.s-tabs__link.is-active(href='', title='') Фильтры
-        .s-tabs__content
-          .s-filters
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Чехлы и накладки
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "Apple", "Samsung", "Xiaomi", "Huawei", "Doogee", "HTC", "Lenovo", "LG", "Nokia" ]
-                each item in values
-                  li.s-filter__item
-                    a.s-filter__link.js-subnav-link(href='', title='')= item
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Колонки
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "Marshall", "Beats" ]
-                each item in values
-                  li.s-filter__item
-                    a.s-filter__link.js-subnav-link(href='', title='')= item
+          li.s-tabs__item.is-active.js-tabs-item
+            a.s-tabs__link(href='', title='') Фильтры
+        .s-tabs__body
+          .s-tabs__content.js-tabs-content
+            .s-filters
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Чехлы и накладки
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.js-navdrop
+                  - var values = [ "Apple", "Samsung", "Xiaomi", "Huawei", "Doogee", "HTC", "Lenovo", "LG", "Nokia" ]
+                  each item in values
+                    li.s-filter__item
+                      a.s-filter__link.js-subnav-link(href='', title='')= item
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Колонки
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.js-navdrop
+                  - var values = [ "Marshall", "Beats" ]
+                  each item in values
+                    li.s-filter__item
+                      a.s-filter__link.js-subnav-link(href='', title='')= item
 
-        .s-tabs__content.is-active
-          .s-filters
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Модель
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "Apple iPhone 7", "Apple iPhone 7 Plus", "Doogee X5 Max/X5 Max Pro", "Doogee X5/X5s/X5 Pro", "Huawei Y6 II", "Huawei Y5II", "Huawei Honor 5C", "Huawei P9", "Lenovo A1000", "Lenovo A2010", "Lenovo Vibe C", "Meizu M3s", "Meizu MX6", "Meizu M3 Note", "Meizu M3", "Meizu PRO 6", "Samsung Galaxy A3 2016", "Samsung Galaxy A5 2016", "Samsung Galaxy A7 2016", "Samsung Galaxy J1 2016", "Samsung Galaxy J1 mini 2016", "Samsung Galaxy J3 2016", "Samsung Galaxy J5 2016", "Samsung Galaxy J7 2016", "Samsung Galaxy S7 edge G935", "Samsung Galaxy S7 G930", "Xiaomi Redmi 3s/3 Pro", "Xiaomi Redmi Note 3", "Xiaomi Mi Max", "Xiaomi Mi5" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Производитель
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "Apple", "DIGI", "Doogee", "Golla", "HTC", "Lenovo", "LG", "Melkco", "Nillkin", "Nokia", "ODOYO", "Ozaki", "RED POINT", "Samsung", "SGP", "SOX", "Tucano", "VOIA" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Сортировать
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "по популярности", "только новинки", "от дешевых к дорогим", "от дорогих к дешевым" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item
+          .s-tabs__content.js-tabs-content
+            .s-filters
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Модель
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "Apple iPhone 7", "Apple iPhone 7 Plus", "Doogee X5 Max/X5 Max Pro", "Doogee X5/X5s/X5 Pro", "Huawei Y6 II", "Huawei Y5II", "Huawei Honor 5C", "Huawei P9", "Lenovo A1000", "Lenovo A2010", "Lenovo Vibe C", "Meizu M3s", "Meizu MX6", "Meizu M3 Note", "Meizu M3", "Meizu PRO 6", "Samsung Galaxy A3 2016", "Samsung Galaxy A5 2016", "Samsung Galaxy A7 2016", "Samsung Galaxy J1 2016", "Samsung Galaxy J1 mini 2016", "Samsung Galaxy J3 2016", "Samsung Galaxy J5 2016", "Samsung Galaxy J7 2016", "Samsung Galaxy S7 edge G935", "Samsung Galaxy S7 G930", "Xiaomi Redmi 3s/3 Pro", "Xiaomi Redmi Note 3", "Xiaomi Mi Max", "Xiaomi Mi5" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Производитель
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "Apple", "DIGI", "Doogee", "Golla", "HTC", "Lenovo", "LG", "Melkco", "Nillkin", "Nokia", "ODOYO", "Ozaki", "RED POINT", "Samsung", "SGP", "SOX", "Tucano", "VOIA" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Сортировать
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "по популярности", "только новинки", "от дешевых к дорогим", "от дорогих к дешевым" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item
 
   .sidebar-holder(style='display: inline-block; margin-bottom: 40px; vertical-align: top;')
     h2(style='text-align: center; margin-bottom: 30px;') Колонки
     .sidebar 
-      .s-tabs
-        .s-tabs__links
-          .s-tabs__item
+      .s-tabs.js-sidebar-tabs
+        ul.s-tabs__links
+          li.s-tabs__item.js-tabs-item
             a.s-tabs__link(href='', title='') Каталог
-          .s-tabs__item
-            a.s-tabs__link.is-active(href='', title='') Фильтры
-        .s-tabs__content
+          li.s-tabs__item.is-active.js-tabs-item
+            a.s-tabs__link(href='', title='') Фильтры
+        .s-tabs__body
+          .s-tabs__content.js-tabs-content
 
-        .s-tabs__content.is-active
-          .s-filters
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Общие параметры
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "Беспроводное подключение Bluetooth", "NFС", "Пылевлагозащищенные", "Портативные", "Слот для карты памяти" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item
-            .s-filter
-              .s-filter__title
-                span Производитель:
-                //- span.s-filter__arrow.icon-chevron
-              ul.s-filter__tags-list
-                - var values = [ "BOSE", "EMOJI", "HOCO", "JBL", "KLIPSCH", "GEAR4", "DEFINITIVE", "HARMAN KORDON", "MOMAX", "XIAOMI", "ILUX" ]
-                each item in values
-                  li.s-filter__tag
-                    label.tag
-                      input(type="checkbox")
-                      span.tag__text= item
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Сортировать
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "по популярности", "только новинки", "от дешевых к дорогим", "от дорогих к дешевым" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item
+          .s-tabs__content.js-tabs-content
+            .s-filters
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Общие параметры
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "Беспроводное подключение Bluetooth", "NFС", "Пылевлагозащищенные", "Портативные", "Слот для карты памяти" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item
+              .s-filter
+                .s-filter__title
+                  span Производитель:
+                  //- span.s-filter__arrow.icon-chevron
+                ul.s-filter__tags-list
+                  - var values = [ "BOSE", "EMOJI", "HOCO", "JBL", "KLIPSCH", "GEAR4", "DEFINITIVE", "HARMAN KORDON", "MOMAX", "XIAOMI", "ILUX" ]
+                  each item in values
+                    li.s-filter__tag
+                      label.tag
+                        input(type="checkbox")
+                        span.tag__text= item
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Сортировать
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "по популярности", "только новинки", "от дешевых к дорогим", "от дорогих к дешевым" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item
 
   .sidebar-holder(style='display: inline-block; margin-bottom: 40px; vertical-align: top;')
     h2(style='text-align: center; margin-bottom: 30px;') Стекла
     .sidebar 
-      .s-tabs
-        .s-tabs__links
-          .s-tabs__item
+      .s-tabs.js-sidebar-tabs
+        ul.s-tabs__links
+          li.s-tabs__item.js-tabs-item
             a.s-tabs__link(href='', title='') Каталог
-          .s-tabs__item
-            a.s-tabs__link.is-active(href='', title='') Фильтры
-        .s-tabs__content
-          .s-filters
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Защитные стекла
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "Apple iPhone", "Asus ZenFone", "HTC", "Lenovo", "LG", "Meizu", "Microsoft", "Samsung", "Sony", "Xiaomi" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                     a.s-filter__link= item
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Наушники
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "Вкладыши (внутриканальные)", "Накладные" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                     a.s-filter__link= item
+          li.s-tabs__item.is-active.js-tabs-item
+            a.s-tabs__link(href='', title='') Фильтры
+        .s-tabs__body
+          .s-tabs__content.js-tabs-content
+            .s-filters
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Защитные стекла
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.js-navdrop
+                  - var values = [ "Apple iPhone", "Asus ZenFone", "HTC", "Lenovo", "LG", "Meizu", "Microsoft", "Samsung", "Sony", "Xiaomi" ]
+                  each item in values
+                    li.s-filter__item
+                       a.s-filter__link= item
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Наушники
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.js-navdrop
+                  - var values = [ "Вкладыши (внутриканальные)", "Накладные" ]
+                  each item in values
+                    li.s-filter__item
+                       a.s-filter__link= item
 
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Кабеля
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Кабеля
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.js-navdrop
 
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Зарядные устройства
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Зарядные устройства
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.js-navdrop
 
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span PowerBank
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span PowerBank
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.js-navdrop
 
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Селфи штативы
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Селфи штативы
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.js-navdrop
 
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Автодержатели
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                
-        .s-tabs__content.is-active
-          .s-filters
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Для модели
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "Apple iPhone 5/5s/5c", "Apple iPhone 6", "HTC One M9", "Lenovo A5000", "Lenovo A6000", "Lenovo A7000", "Lenovo P70", "Lenovo P780", "Lenovo S660", "LG G4", "Meizu M1 Note", "Samsung Galaxy A3/A300", "Samsung Galaxy A5/A500", "Samsung Galaxy A7/A700", "Samsung Galaxy Core Prime G360", "Samsung Galaxy Grand Prime", "Samsung Galaxy S6 G920", "Sony M4 Aqua", "Sony Xperia Z3 Compact", "Sony Xperia Z4", "Xiaomi Mi 4", "Xiaomi Redmi 2"  ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item 
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Тип стекла
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "Обычные", "3D" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item
-            .s-filter
-              .s-filter__title
-                span Производитель:
-                //- span.s-filter__arrow.icon-chevron
-              ul.s-filter__tags-list
-                - var values = [ "BOSE", "EMOJI", "HOCO", "JBL", "KLIPSCH" ]
-                each item in values
-                  li.s-filter__tag
-                    label.tag
-                      input(type="checkbox")
-                      span.tag__text= item
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Сортировать
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "по популярности", "только новинки", "от дешевых к дорогим", "от дорогих к дешевым" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item
-  
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Автодержатели
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.js-navdrop
+                  
+          .s-tabs__content.js-tabs-content
+            .s-filters
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Для модели
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "Apple iPhone 5/5s/5c", "Apple iPhone 6", "HTC One M9", "Lenovo A5000", "Lenovo A6000", "Lenovo A7000", "Lenovo P70", "Lenovo P780", "Lenovo S660", "LG G4", "Meizu M1 Note", "Samsung Galaxy A3/A300", "Samsung Galaxy A5/A500", "Samsung Galaxy A7/A700", "Samsung Galaxy Core Prime G360", "Samsung Galaxy Grand Prime", "Samsung Galaxy S6 G920", "Sony M4 Aqua", "Sony Xperia Z3 Compact", "Sony Xperia Z4", "Xiaomi Mi 4", "Xiaomi Redmi 2"  ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item 
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Тип стекла
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "Обычные", "3D" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item
+              .s-filter
+                .s-filter__title
+                  span Производитель:
+                  //- span.s-filter__arrow.icon-chevron
+                ul.s-filter__tags-list
+                  - var values = [ "BOSE", "EMOJI", "HOCO", "JBL", "KLIPSCH" ]
+                  each item in values
+                    li.s-filter__tag
+                      label.tag
+                        input(type="checkbox")
+                        span.tag__text= item
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Сортировать
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "по популярности", "только новинки", "от дешевых к дорогим", "от дорогих к дешевым" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item
+    
   .sidebar-holder(style='display: inline-block; margin-bottom: 40px; vertical-align: top;')
     h2(style='text-align: center; margin-bottom: 30px;') Наушники 
     .sidebar 
-      .s-tabs
-        .s-tabs__links
-          .s-tabs__item
+      .s-tabs.js-sidebar-tabs
+        ul.s-tabs__links
+          li.s-tabs__item.js-tabs-item
             a.s-tabs__link(href='', title='') Каталог
-          .s-tabs__item
-            a.s-tabs__link.is-active(href='', title='') Фильтры
-        .s-tabs__content
-                
-        .s-tabs__content.is-active
-          .s-filters
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Общие параметры
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "Беспроводные (Bluetooth)", "Lightning", "3,5 мм", "с микрофоном", "спортивные", "пылевлогозащищенные" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item 
-            .s-filter
-              .s-filter__title
-                span Производитель:
-                //- span.s-filter__arrow.icon-chevron
-              ul.s-filter__tags-list
-                - var values = [ "Beats", "Ergo", "Jabra", "Koss", "Marshall", "Nomi", "Sennheiser", "Sony", "Sven" ]
-                each item in values
-                  li.s-filter__tag
-                    label.tag
-                      input(type="checkbox")
-                      span.tag__text= item
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Сортировать
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "по популярности", "только новинки", "от дешевых к дорогим", "от дорогих к дешевым" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item
+          li.s-tabs__item.is-active.js-tabs-item
+            a.s-tabs__link(href='', title='') Фильтры
+        .s-tabs__body
+          .s-tabs__content.js-tabs-content
+                  
+          .s-tabs__content.js-tabs-content
+            .s-filters
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Общие параметры
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "Беспроводные (Bluetooth)", "Lightning", "3,5 мм", "с микрофоном", "спортивные", "пылевлогозащищенные" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item 
+              .s-filter
+                .s-filter__title
+                  span Производитель:
+                  //- span.s-filter__arrow.icon-chevron
+                ul.s-filter__tags-list
+                  - var values = [ "Beats", "Ergo", "Jabra", "Koss", "Marshall", "Nomi", "Sennheiser", "Sony", "Sven" ]
+                  each item in values
+                    li.s-filter__tag
+                      label.tag
+                        input(type="checkbox")
+                        span.tag__text= item
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Сортировать
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "по популярности", "только новинки", "от дешевых к дорогим", "от дорогих к дешевым" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item
 
   .sidebar-holder(style='display: inline-block; margin-bottom: 40px; vertical-align: top;')
     h2(style='text-align: center; margin-bottom: 30px;') Кабеля 
     .sidebar 
-      .s-tabs
-        .s-tabs__links
-          .s-tabs__item
+      .s-tabs.js-sidebar-tabs
+        ul.s-tabs__links
+          li.s-tabs__item.js-tabs-item
             a.s-tabs__link(href='', title='') Каталог
-          .s-tabs__item
-            a.s-tabs__link.is-active(href='', title='') Фильтры
-        .s-tabs__content
-                
-        .s-tabs__content.is-active
-          .s-filters
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Тип разъема
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "Lightning", "Micro", "Type C", "Другие" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item 
-            .s-filter
-              .s-filter__title
-                span Производитель:
-                //- span.s-filter__arrow.icon-chevron
-              ul.s-filter__tags-list
-                - var values = [ "Apple", "Drobak", "HOCO", "Samsung", "Nillkin", "Kit" ]
-                each item in values
-                  li.s-filter__tag
-                    label.tag
-                      input(type="checkbox")
-                      span.tag__text= item
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Сортировать
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "по популярности", "только новинки", "от дешевых к дорогим", "от дорогих к дешевым" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item
-  
+          li.s-tabs__item.is-active.js-tabs-item
+            a.s-tabs__link(href='', title='') Фильтры
+        .s-tabs__body  
+          .s-tabs__content.js-tabs-content
+                  
+          .s-tabs__content.js-tabs-content
+            .s-filters
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Тип разъема
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "Lightning", "Micro", "Type C", "Другие" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item 
+              .s-filter
+                .s-filter__title
+                  span Производитель:
+                  //- span.s-filter__arrow.icon-chevron
+                ul.s-filter__tags-list
+                  - var values = [ "Apple", "Drobak", "HOCO", "Samsung", "Nillkin", "Kit" ]
+                  each item in values
+                    li.s-filter__tag
+                      label.tag
+                        input(type="checkbox")
+                        span.tag__text= item
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Сортировать
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "по популярности", "только новинки", "от дешевых к дорогим", "от дорогих к дешевым" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item
+    
   .sidebar-holder(style='display: inline-block; margin-bottom: 40px; vertical-align: top;')
     h2(style='text-align: center; margin-bottom: 30px;') Зарядные устройства 
     .sidebar 
-      .s-tabs
-        .s-tabs__links
-          .s-tabs__item
+      .s-tabs.js-sidebar-tabs
+        ul.s-tabs__links
+          li.s-tabs__item.js-tabs-item
             a.s-tabs__link(href='', title='') Каталог
-          .s-tabs__item
-            a.s-tabs__link.is-active(href='', title='') Фильтры
-        .s-tabs__content
-                
-        .s-tabs__content.is-active
-          .s-filters
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Тип устройства 
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "Сетевые", "Автомобильные" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item 
+          li.s-tabs__item.is-active.js-tabs-item
+            a.s-tabs__link(href='', title='') Фильтры
+        .s-tabs__body 
+          .s-tabs__content.js-tabs-content
+                  
+          .s-tabs__content.js-tabs-content
+            .s-filters
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Тип устройства 
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "Сетевые", "Автомобильные" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item 
 
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Тип разъема
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "Lightning", "Micro", "Type C", "Без кабеля", "Другие" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item 
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Тип разъема
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "Lightning", "Micro", "Type C", "Без кабеля", "Другие" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item 
 
-            .s-filter
-              .s-filter__title
-                span Производитель:
-                //- span.s-filter__arrow.icon-chevron
-              ul.s-filter__tags-list
-                - var values = [ "Apple", "Drobak", "HOCO", "Samsung", "Nillkin", "Kit" ]
-                each item in values
-                  li.s-filter__tag
-                    label.tag
-                      input(type="checkbox")
-                      span.tag__text= item
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Сортировать
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "по популярности", "только новинки", "от дешевых к дорогим", "от дорогих к дешевым" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item
-  
+              .s-filter
+                .s-filter__title
+                  span Производитель:
+                  //- span.s-filter__arrow.icon-chevron
+                ul.s-filter__tags-list
+                  - var values = [ "Apple", "Drobak", "HOCO", "Samsung", "Nillkin", "Kit" ]
+                  each item in values
+                    li.s-filter__tag
+                      label.tag
+                        input(type="checkbox")
+                        span.tag__text= item
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Сортировать
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "по популярности", "только новинки", "от дешевых к дорогим", "от дорогих к дешевым" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item
+    
   .sidebar-holder(style='display: inline-block; margin-bottom: 40px; vertical-align: top;')
     h2(style='text-align: center; margin-bottom: 30px;') PowerBank
     .sidebar 
-      .s-tabs
-        .s-tabs__links
-          .s-tabs__item
+      .s-tabs.js-sidebar-tabs
+        ul.s-tabs__links
+          li.s-tabs__item.js-tabs-item
             a.s-tabs__link(href='', title='') Каталог
-          .s-tabs__item
-            a.s-tabs__link.is-active(href='', title='') Фильтры
-        .s-tabs__content
-                
-        .s-tabs__content.is-active
-          .s-filters
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Общие параметры
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "Индикатор заряда", "Фонарик" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item 
+          li.s-tabs__item.is-active.js-tabs-item
+            a.s-tabs__link(href='', title='') Фильтры
+        .s-tabs__body 
+          .s-tabs__content.js-tabs-content
+                  
+          .s-tabs__content.js-tabs-content
+            .s-filters
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Общие параметры
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "Индикатор заряда", "Фонарик" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item 
 
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Емкость батареи
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "2600 mAh", "5100 mAh", "8000 mAh", "10000 mAh", "10200 mAh", "12000 mAh", "16000 mAh", "20000 mAh" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item 
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Разъемы
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "Lightning", "Micro", "Type C", "USB" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item 
-            .s-filter
-              .s-filter__title
-                span Производитель:
-                //- span.s-filter__arrow.icon-chevron
-              ul.s-filter__tags-list
-                - var values = [ "Apple", "Drobak", "HOCO", "Samsung", "Nillkin", "Kit" ]
-                each item in values
-                  li.s-filter__tag
-                    label.tag
-                      input(type="checkbox")
-                      span.tag__text= item
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Сортировать
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "по популярности", "только новинки", "от дешевых к дорогим", "от дорогих к дешевым" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item
-  
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Емкость батареи
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "2600 mAh", "5100 mAh", "8000 mAh", "10000 mAh", "10200 mAh", "12000 mAh", "16000 mAh", "20000 mAh" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item 
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Разъемы
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "Lightning", "Micro", "Type C", "USB" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item 
+              .s-filter
+                .s-filter__title
+                  span Производитель:
+                  //- span.s-filter__arrow.icon-chevron
+                ul.s-filter__tags-list
+                  - var values = [ "Apple", "Drobak", "HOCO", "Samsung", "Nillkin", "Kit" ]
+                  each item in values
+                    li.s-filter__tag
+                      label.tag
+                        input(type="checkbox")
+                        span.tag__text= item
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Сортировать
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "по популярности", "только новинки", "от дешевых к дорогим", "от дорогих к дешевым" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item
+    
   .sidebar-holder(style='display: inline-block; margin-bottom: 40px; vertical-align: top;')
     h2(style='text-align: center; margin-bottom: 30px;') Селфи штативы
     .sidebar 
-      .s-tabs
-        .s-tabs__links
-          .s-tabs__item
+      .s-tabs.js-sidebar-tabs
+        ul.s-tabs__links
+          li.s-tabs__item.js-tabs-item
             a.s-tabs__link(href='', title='') Каталог
-          .s-tabs__item
-            a.s-tabs__link.is-active(href='', title='') Фильтры
-        .s-tabs__content
-                
-        .s-tabs__content.is-active
-          .s-filters
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Общие параметры
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "Тип соединения 3,5", "Тип соединения Bluetooth ", "Тренога в комплекте", "ZOOM" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item 
+          li.s-tabs__item.is-active.js-tabs-item
+            a.s-tabs__link(href='', title='') Фильтры
+        .s-tabs__body 
+          .s-tabs__content.js-tabs-content
+                  
+          .s-tabs__content.js-tabs-content
+            .s-filters
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Общие параметры
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "Тип соединения 3,5", "Тип соединения Bluetooth ", "Тренога в комплекте", "ZOOM" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item 
 
-            .s-filter
-              .s-filter__title
-                span Производитель:
-              ul.s-filter__tags-list
-                - var values = [ "Apple", "Drobak", "HOCO", "Samsung", "Nillkin", "Kit" ]
-                each item in values
-                  li.s-filter__tag
-                    label.tag
-                      input(type="checkbox")
-                      span.tag__text= item
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Сортировать
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "по популярности", "только новинки", "от дешевых к дорогим", "от дорогих к дешевым" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item
+              .s-filter
+                .s-filter__title
+                  span Производитель:
+                ul.s-filter__tags-list
+                  - var values = [ "Apple", "Drobak", "HOCO", "Samsung", "Nillkin", "Kit" ]
+                  each item in values
+                    li.s-filter__tag
+                      label.tag
+                        input(type="checkbox")
+                        span.tag__text= item
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Сортировать
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "по популярности", "только новинки", "от дешевых к дорогим", "от дорогих к дешевым" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item
 
   .sidebar-holder(style='display: inline-block; margin-bottom: 40px; vertical-align: top;')
     h2(style='text-align: center; margin-bottom: 30px;') Авто держатели
     .sidebar 
-      .s-tabs
-        .s-tabs__links
-          .s-tabs__item
+      .s-tabs.js-sidebar-tabs
+        ul.s-tabs__links
+          li.s-tabs__item.js-tabs-item
             a.s-tabs__link(href='', title='') Каталог
-          .s-tabs__item
-            a.s-tabs__link.is-active(href='', title='') Фильтры
-        .s-tabs__content
-                
-        .s-tabs__content.is-active
-          .s-filters
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Общие параметры
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "Наклеиваемые", "Вставляемые в решетку воздуховода", "Вакуумная присоска" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item 
+          li.s-tabs__item.is-active.js-tabs-item
+            a.s-tabs__link(href='', title='') Фильтры
+        .s-tabs__body 
+          .s-tabs__content.js-tabs-content
+                  
+          .s-tabs__content.js-tabs-content
+            .s-filters
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Общие параметры
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "Наклеиваемые", "Вставляемые в решетку воздуховода", "Вакуумная присоска" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item 
 
-            .s-filter
-              .s-filter__title
-                span Производитель:
-              ul.s-filter__tags-list
-                - var values = [ "Apple", "Drobak", "HOCO", "Samsung", "Nillkin", "Kit" ]
-                each item in values
-                  li.s-filter__tag
-                    label.tag
-                      input(type="checkbox")
-                      span.tag__text= item
-            .s-filter
-              .s-filter__title.js-nav-link  
-                span Сортировать
-                span.s-filter__arrow.icon-chevron
-              ul.s-filter__list.js-navdrop
-                - var values = [ "по популярности", "только новинки", "от дешевых к дорогим", "от дорогих к дешевым" ]
-                each item in values
-                  li.s-filter__item.s-filter__checkbox
-                    label.checkbox
-                      input(type="checkbox")
-                      span.checkbox__text= item
+              .s-filter
+                .s-filter__title
+                  span Производитель:
+                ul.s-filter__tags-list
+                  - var values = [ "Apple", "Drobak", "HOCO", "Samsung", "Nillkin", "Kit" ]
+                  each item in values
+                    li.s-filter__tag
+                      label.tag
+                        input(type="checkbox")
+                        span.tag__text= item
+              .s-filter
+                .s-filter__title.js-nav-link  
+                  span Сортировать
+                  span.s-filter__arrow.icon-chevron
+                ul.s-filter__list.s-filter__list_checkbox.js-navdrop
+                  - var values = [ "по популярности", "только новинки", "от дешевых к дорогим", "от дорогих к дешевым" ]
+                  each item in values
+                    li.s-filter__item
+                      label.checkbox
+                        input(type="checkbox")
+                        span.checkbox__text= item

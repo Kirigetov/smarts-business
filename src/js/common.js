@@ -5,6 +5,21 @@ $(document).ready(function() {
 		allowClear: true
 	});
 
+    // fixed header
+    (function() {
+        $(window).scroll(function () {
+            if( $(window).scrollTop() > 20){
+              $('.js-header').addClass('is-fixed');
+            } else {
+              $('.js-header').removeClass('is-fixed');
+            }
+        });
+
+    })();
+
+    // scroll sidebar
+    $('.js-scroll-sidebar').perfectScrollbar();
+
 	// show/hide dropdown in navigation
 	function initSubmenuToggle() {
 		var navLink = $('.js-nav-link'),
@@ -19,7 +34,6 @@ $(document).ready(function() {
 		};
 
 		var showNavDrop = function(el) {
-			// console.log(closestParent);
 
 			$(el).addClass(active);
 			$(el).parent().find(navDrop).addClass(active);
@@ -31,7 +45,6 @@ $(document).ready(function() {
 				evt.preventDefault();
 				var isActive = $(this).hasClass(active);
 
-				// console.log($(this));
 				hideCurrentNavDrop();
 				if ( !isActive ) showNavDrop($(this));
 			} else {
@@ -44,56 +57,80 @@ $(document).ready(function() {
 		subnavLink.click(function(evt) {
 			if ( $(this).siblings(subDrop).length ) {
 				evt.preventDefault();
-				// var	closestParent = $(el).closest($('.js-nav-option'));
 
 				$(this).toggleClass(active);
 				$(this).siblings(subDrop).toggleClass(active);
 			}
 		});
-	}
+	};
  
-    // function switchSidebarTab() {
+    function switchSidebarTab() {
         
-    //     document.on('click', $('.js-tabs-link'), function(e) {
+        $('.js-tabs-item').each(function() {
 
-    //         var targetLink = $(e.currentTarget),
-    //             idLinkParent = targetLink.closest($('.js-tabs-item')).index(),
-    //             parentLink = targetLink.parents(this._opt.container),
-    //             links = parentLink.find(this._opt.item),
-    //             content = parentLink.find(`${this._opt.content}:not(:nth-child(${id+1}))`),
-    //             toShow = parentLink.find(this._opt.content).eq(id),
-    //             active = 'is-active';
+            $(this).on('click', function(e) {
 
-    //             links.removeClass(active);
-    //             target.addClass(active);
+                var targetLink = $(e.currentTarget),
+                    idLink = targetLink.index(),
+                    parentLink = targetLink.closest( $('.js-sidebar-tabs') ),
+                    links = parentLink.find( $('.js-tabs-item') ),
+                    content = parentLink.find( $('.js-tabs-content') ),
+                    // content = parentLink.find(`${'.js-tabs-content'}:not(:nth-child(${idLink+1}))`),
+                    toShow = parentLink.find(content).eq(idLink),
+                    active = 'is-active';
 
-    //             content.hide();
-    //             toShow.fadeIn('fast');
+                    links.removeClass(active);
+                    targetLink.addClass(active);
 
-    //             e.preventDefault();
+                    content.hide();
+                    toShow.fadeIn('fast');
 
-    //         // function _hide() {
-    //         //   links.removeClass(active);
-    //         //   content.hide();
-    //         // }
-    // }
-    
+                    e.preventDefault();
+            });
+        });
+    }    
+
+    jQuery.fn.exists = function(){return this.length>0;}
+
     // quantity
-    $('.js-quantity').jqxNumberInput({
-        spinButtons: true,
-        inputMode: 'advanced',
-        digits: 3,
-        decimalDigits: 0,
-        min: 0,
-        promptChar: "",
-        width: 50,
-        height: "25px"
+    if ($('.js-quantity').exists()) {
+    
+        $('.js-quantity').jqxNumberInput({
+            spinButtons: true,
+            inputMode: 'advanced',
+            digits: 3,
+            decimalDigits: 0,
+            min: 0,
+            promptChar: "",
+            width: 50,
+            height: "25px"
+        });
+    };
+
+    (function reasonTabs() {
+        $('.js-toggle-item').click(function(e) {
+            e.preventDefault();
+
+            var _this = $(this),
+                p = _this.parent(),
+                siblings = p.siblings();
+
+            siblings.find( $('.js-toggle-drop') ).slideUp();
+            siblings.find( $('.js-toggle-drop') ).removeClass('is-active');
+            p.toggleClass('is-active');
+            p.find( $('.js-toggle-drop') ).slideDown();
+            siblings.removeClass('is-active');
+
+        });
+    })();
+
+    $('.js-drop-popup').on('click', function(){
+        $(this).parent().toggleClass('is-active');
     });
 
     (function init() {
 	   initSubmenuToggle();
-       // switchSidebarTab();
+       switchSidebarTab();
     })();
-
-
+ 
 });
