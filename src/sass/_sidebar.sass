@@ -1,8 +1,10 @@
 // sidebar
 .sidebar
 	width: 260px
+	margin-bottom: 30px
 
 .s-tabs
+	margin-bottom: 25px
 	&__links
 		margin-bottom: 10px
 		font-size: 0
@@ -106,3 +108,25 @@
 
 .icon-chevron
 	+s('chevron-down')
+
+.price-list
+	display: inline-block
+	padding: 10px 18px 
+	background-color: #cc2b23
+	border-radius: 5px
+	text-decoration: none
+	&__img, &__title
+		vertical-align: middle
+	&__img
+		margin-right: 10px
+	&__title
+		font-size: 15px
+		color: #FFF 
+		+bold
+		text-transform: uppercase
+	&:hover
+		.price-list__title
+			text-decoration: underline
+
+.icon-price
+	+s('price')

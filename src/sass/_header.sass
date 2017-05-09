@@ -1,10 +1,9 @@
 // header
-.header-wrap
+.header-container
     background-color: #cc2b23
-    // background-image: linear-gradient(to top, #91201b 0%, #cc2b23 100%)
+    margin-bottom: 30px
 
 .header
-    margin-bottom: 25px
     font-size: 0
     display: flex
     justify-content: space-between
@@ -156,19 +155,19 @@
 .basket
     position: relative
     text-align: center
-    padding: 10px 15px 0
+    padding: 10px 15px
     &:before
         content: "" 
         position: absolute
-        top: -15px
+        top: 0
         left: 0
-        bottom: -15px
+        bottom: 0
         width: 100% 
         background-image: linear-gradient(to top, #c9d4de 0%, #f5f6f7 20%, white 100%)
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.15)
     &__row
         position: relative
-        &:not(:last-child)  
+        &_mb
             margin-bottom: 15px 
     &__img, &__value
         display: inline-block
