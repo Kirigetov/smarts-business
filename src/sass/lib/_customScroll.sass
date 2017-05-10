@@ -1,0 +1,85 @@
+/* perfect-scrollbar v0.6.10*/
+
+.ps
+  -ms-touch-action: none
+  touch-action: none
+  overflow: hidden !important
+  -ms-overflow-style: none
+  // &.ps__active-x > .ps-scrollbar-x-rail, &.ps-active-y > .ps-scrollbar-y-rail
+  //   display: block
+  //   background-color: $whiteType
+  &.ps__in-scrolling
+    pointer-events: none
+    &.ps__x > .ps__scrollbar-x-rail
+      opacity: 0.9
+    &.ps__y > .ps__scrollbar-y-rail
+      opacity: 0.9
+  >
+    .ps__scrollbar-x-rail
+      display: block
+      background-color: #eee 
+      position: absolute
+      /* please don't change 'position'*/
+      // border-radius: 0px
+      opacity: 0.6
+      transition: background-color .2s linear, opacity .2s linear
+      bottom: 3px
+      /* there must be 'bottom' for ps-scrollbar-x-rail*/
+      height: 8px
+      > .ps__scrollbar-x
+        position: absolute
+        /* please don't change 'position'*/
+        background-color: #cc2b23
+        border-radius: 4px
+        transition: background-color .2s linear
+        bottom: 0
+        /* there must be 'bottom' for ps-scrollbar-x*/
+        height: 8px
+    .ps__scrollbar-y-rail
+      display: block 
+      background-color: #eee 
+      // display: none
+      position: absolute
+      /* please don't change 'position'*/
+      border-radius: 4px
+      opacity: 0.6
+      transition: background-color .2s linear, opacity .2s linear
+      right: 3px
+      /* there must be 'right' for ps-scrollbar-y-rail*/
+      width: 3px
+      > .ps__scrollbar-y
+        position: absolute
+        /* please don't change 'position'*/
+        background-color: #cc2b23
+        border-radius: 4px
+        transition: background-color .2s linear
+        right: 0
+        /* there must be 'right' for ps-scrollbar-y*/
+        width: 3px
+  &:hover
+    &.ps__in-scrolling
+      pointer-events: none
+      &.ps__x > .ps__scrollbar-x-rail
+        opacity: 0.9
+        > .ps__scrollbar-x 
+      &.ps__y > .ps__scrollbar-y-rail
+        opacity: 0.9
+        > .ps__scrollbar-y
+    >
+      .ps__scrollbar-x-rail, .ps__scrollbar-y-rail
+        opacity: 0.6
+      .ps__scrollbar-x-rail:hover
+        opacity: 0.9
+        > .ps__scrollbar-x
+      .ps__scrollbar-y-rail:hover
+        opacity: 0.9
+        > .ps__scrollbar-y
+          cursor: pointer
+
+@supports (-ms-overflow-style: none)
+  .ps
+    overflow: auto !important
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+  .ps
+    overflow: auto !important 
