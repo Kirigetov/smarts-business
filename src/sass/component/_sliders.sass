@@ -1,0 +1,161 @@
+.detail-img
+    +clr
+    
+    &__thumb
+        width: 70px
+        float: left
+        margin-top: 10px
+        margin-left: 10px
+        position: relative
+
+    &__main 
+        width: 240px
+        float: left
+
+.main-cart-img
+    background-color: #fff
+
+    &__item 
+        padding: 10px
+        height: 245px
+        display: inline-block
+        img 
+            max-width: 100%
+            max-height: 100%
+            width: auto
+            height: auto
+            margin: 0 auto
+
+.image-thumb
+
+    &__item 
+        padding: 5px
+        background-color: #fff
+        margin-bottom: 5px
+        height: 70px
+        cursor: pointer
+        border: 1px solid #cc2b23
+        &:last-child 
+            margin-bottom: 0
+        img 
+            transition: .2s
+            max-width: 100%
+            max-height: 100%
+            width: auto
+            height: auto
+            margin: 0 auto
+
+        &:not(.slick-current)
+            border: 1px solid #ddd
+            img 
+                opacity: .3
+
+        &:hover 
+            img 
+                opacity: 1
+
+    &__arrow 
+        text-align: center
+        cursor: pointer
+        position: absolute
+        left: 50%
+        transform: translate(-50%, 0)
+        &.icon-arrow
+            width: 16px
+            height: 10px 
+            color: #cc2b23
+            &:before
+                font-size: 8px
+        &_prev 
+            top: -15px
+            transform: rotateX(180deg) translate(-50%, 0)
+        &_next 
+            bottom: -8px
+
+.detail-features
+    padding-right: 40px
+    &__head
+        padding-bottom: 10px 
+        border-bottom: 1px solid #ddd
+    &__body
+        position: static
+        padding: 10px 0
+    &__title, &__subtitle
+        text-transform: uppercase
+        +bold
+    &__title
+        margin-bottom: 5px
+        color: #6a6a6a
+        font-size: 16px
+    &__subtitle
+        color: #cc2b23
+        font-size: 12px
+    &__pagination
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        width: 40px 
+        border-left: 1px solid #ddd
+    &__arrow
+        text-align: center
+        cursor: pointer
+        position: absolute
+        left: 50%
+        transform: translate(-50%, 0)
+        transition: background .2s
+        &.icon-arrow
+            width: 100%
+            height: 40px 
+            line-height: 40px 
+            color: #cc2b23
+            border-top: 1px solid #ddd
+            &:before
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%) 
+                font-size: 8px
+        &:hover
+            background-color: rgba(#ddd, .2) 
+        &_prev 
+            top: 0
+            transform: rotateX(180deg) translate(-50%, 0)
+        &_next 
+            bottom: 0
+    &__dots
+        position: absolute
+        right: 0
+        top: 60%
+        bottom: 0
+        font-size: 0
+        z-index: 5
+        margin-right: 9px
+        transform: translate(-50%, -50%)
+        li
+
+            &.slick-active
+                button
+                    background-color: #ff0000
+            button
+                font-size: 0
+                width: 10px 
+                height: 10px
+                margin-bottom: 10px 
+                border-radius: 50% 
+                background-color: #ebeff2
+
+.detail-features__table
+    max-width: 400px
+    width: 100% 
+    &-head
+        color: #6a6a6a
+    &-data
+        color: #000
+    .detail-features__table-head,
+    .detail-features__table-data
+        font-size: 12px
+        +bold
+        text-transform: uppercase
+        padding: 4px 10px 4px 0
+        border: none
