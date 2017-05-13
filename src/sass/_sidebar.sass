@@ -36,6 +36,10 @@
 .s-filter
 	&:not(:first-child)
 		border-top: 1px solid #ecf1f5
+	&_static	
+		margin-bottom: 20px
+		.s-filter__list
+			display: block
 	&__title
 		position: relative
 		font-size: 14px
@@ -59,6 +63,13 @@
 			right: 40px
 		&.is-active
 			display: block
+		& 
+			+ .s-filter__list_hidden
+				display: none
+				padding-top: 0
+				margin-top: -10px
+				+ .toggle
+					margin-top: 15px
 	&__sub-list
 		display: none
 		background-color: #ededed
@@ -105,7 +116,16 @@
 		right: 20px 
 		margin-top: -1px
 
-		  
+
+.toggle.toggle_pad
+	padding-left: 30px 
+.toggle-more
+	color: #CC2B23 
+	text-decoration: none
+	border-bottom: 1px solid currentColor
+	transition: border-color .2s ease
+	&:hover
+		border-color: transparent
 
 .icon-chevron
 	+s('chevron-down')

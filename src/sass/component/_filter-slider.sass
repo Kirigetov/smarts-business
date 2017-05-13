@@ -1,0 +1,74 @@
+.filter-slider
+	position: relative
+	padding: 0 20px 10px 20px
+	margin: 0px 0 20px
+	overflow: hidden
+	&__row
+		margin-bottom: 50px
+	&__input-field
+		display: inline-block
+		width: 70px 
+		&:not(:last-child)
+			margin-right: 20px
+	&__input
+		display: inline-block
+		max-width: 70px 
+		width: 100% 
+		margin: 5px 10px 10px 0
+		padding: 10px 5px
+		border: 1px solid #e7ebee
+		border-radius: 4px
+		font-size: 13px
+		+bold
+	&__label
+		display: block
+		color: #c5c8d1
+		font-size: 10px
+		+bold
+		line-height: 20px	
+
+// nouislider
+.noUi-horizontal
+	height: 5px
+	border: none
+	border-radius: 3px
+
+.noUi-target
+	background-color: #eef2f5
+
+.noUi-horizontal 
+	.noUi-handle
+		left: -7px
+		width: 14px 
+		height: 14px 
+		border-radius: 50% 
+		background-color: white
+		box-shadow: 0 1px 7px rgba(0, 0, 0, 0.1)
+		&:before,
+		&:after
+			content: none
+
+.noUi-connect
+	background-color: #cc2b23
+	
+.noUi-horizontal 
+	.noUi-tooltip
+		bottom: 190% 
+
+.noUi-tooltip
+	padding: 5px 10px
+	+bold
+	font-size: 12px 
+	box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1)
+	border: none
+	&:before
+		content: "" 
+		position: absolute
+		top: 100% 
+		left: 50%
+		margin-left: -5px
+		height: 10px 
+		width: 10px 
+		margin-top: -7px
+		transform: rotate(45deg)  
+		background: #fff

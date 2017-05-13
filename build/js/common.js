@@ -5,17 +5,6 @@ $(document).ready(function() {
 		allowClear: true
 	});
 
-    // fixed header
-    (function() {
-        $(window).scroll(function () {
-            if( $(window).scrollTop() > 20){
-              $('.js-header').addClass('is-fixed');
-            } else {
-              $('.js-header').removeClass('is-fixed');
-            }
-        });
-
-    })();
 
     // scroll sidebar
     $('.js-scroll-sidebar').perfectScrollbar();
@@ -90,7 +79,7 @@ $(document).ready(function() {
         });
     }    
 
-    jQuery.fn.exists = function(){return this.length>0;}
+    jQuery.fn.exists = function() {return this.length>0;}
 
     // quantity
     if ($('.js-quantity').exists()) {
