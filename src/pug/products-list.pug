@@ -168,7 +168,7 @@ block content
                       .s-filter__title
                         span Цена(грн.): 
 
-                      .filter-slider
+                      .filter-slider.js-slider(data-min="0", data-max="8000", data-initial="[1000,5000]", data-units="грн")
                         .filter-slider__row
                           .input.filter-slider__input-field
                             label.filter-slider__label(for="input-with-keypress-0") от
@@ -176,10 +176,7 @@ block content
                           .input.filter-slider__input-field
                             label.filter-slider__label(for="input-with-keypress-1") до
                             input.filter-slider__input.js-slider-to(type="text" value="5000")
-
-                        .range-slider.js-slider(data-min="0", data-max="5000", data-initial="[1000,3000]", data-units="грн")
-                          .range-slider__line.js-slider-line
-
+                        .range-slider__line.js-slider-line
 
                     .s-filter
                       .s-filter__title.js-nav-link 
@@ -213,9 +210,9 @@ block content
                 th(data-col-4).order-table__thead.align-left НАЛИЧИЕ 
                 th(data-col-5).order-table__thead.align-left КОД
                 th(data-col-6).order-table__thead.align-left КОЛ-ВО
-              tr
+              tr.js-tab-parent
                 td(colspan='6')
-                  table.product-info
+                  table.product-info.js-toggle-item
                     tr.product-info__row
                       td(data-col-1)
                         .product-info__img-wrap
@@ -230,7 +227,281 @@ block content
                       td(data-col-6).align-left
                         .product-info__quantity.align-left.js-quantity 
 
-                  .product-more
+                  .product-more.js-toggle-drop
+                    .product-more__left.detail-img
+
+                      
+                      figure.detail-img__main.main-cart-img.js-detail-img-main
+                        .main-cart-img__item
+                          img(src="img/thumb-1.jpg" alt="")
+                        
+                        .main-cart-img__item
+                          img(src="img/thumb-2.jpg" alt="")
+                        
+                        .main-cart-img__item
+                          img(src="img/thumb-3.jpg" alt="")
+
+                      .detail-img__thumb.image-thumb
+                        .image-thumb__arrow.image-thumb__arrow_prev.icon-arrow
+                        .image-thumb__arrow.image-thumb__arrow_next.icon-arrow
+
+                        .image-thumb__wrap.js-detail-img-thumb
+                          .image-thumb__item
+                            img(src="img/thumb-1.jpg" alt="")
+                          .image-thumb__item
+                            img(src="img/thumb-1.jpg" alt="")
+                          .image-thumb__item
+                            img(src="img/thumb-1.jpg" alt="")
+                          
+                          .image-thumb__item
+                            img(src="img/thumb-2.jpg" alt="")
+                           
+                          .image-thumb__item
+                            img(src="img/thumb-3.jpg" alt="")
+                        
+                    .product-more__right
+                      .detail-features
+                        .detail-features__head
+                          .detail-features__title ALCATEL ONE TOUCH 1035D DUAL SIM PURE BLACK
+                          .detail-features__subtitle характеристики 
+                        .detail-features__body.js-detail-features
+                          .detail-features__content
+                            table.detail-features__table
+                              tr
+                                td.detail-features__table-head ТИП УСТРОЙСТВА
+                                td.detail-features__table-data телефон
+                              tr
+                                td.detail-features__table-head ЧАСТОТНЫЙ ДИАПАЗОН
+                                td.detail-features__table-data 900 / 1800
+                              tr
+                                td.detail-features__table-head ТИП SIM-КАРТЫ
+                                td.detail-features__table-data Mini-SIM(обычная)
+                              tr
+                                td.detail-features__table-head КОЛ-ВО SIM-КАРТ
+                                td.detail-features__table-data 2
+                              tr
+                                td.detail-features__table-head ДИАГОНАЛЬ экрана
+                                td.detail-features__table-data 1.8"
+                              tr
+                                td.detail-features__table-head РАЗРЕШЕНИЕ экрана
+                                td.detail-features__table-data 160x128 пикс.
+                              tr
+                                td.detail-features__table-head ПАМЯТЬ ОПЕРАТИВНАЯ
+                                td.detail-features__table-data 24 Мб
+                              tr
+                                td.detail-features__table-head ПОДДЕРЖКА КАРТ ПАМЯТИ
+                                td.detail-features__table-data до 8 гб
+                          .detail-features__content
+                            table.detail-features__table
+                              tr
+                                td.detail-features__table-head ДИАГОНАЛЬ экрана
+                                td.detail-features__table-data 1.8"
+                              tr
+                                td.detail-features__table-head РАЗРЕШЕНИЕ экрана
+                                td.detail-features__table-data 160x128 пикс.
+                              tr
+                                td.detail-features__table-head ПАМЯТЬ ОПЕРАТИВНАЯ
+                                td.detail-features__table-data 24 Мб
+                              tr
+                                td.detail-features__table-head ПОДДЕРЖКА КАРТ ПАМЯТИ
+                                td.detail-features__table-data до 8 гб
+                              tr
+                                td.detail-features__table-head ТИП УСТРОЙСТВА
+                                td.detail-features__table-data телефон
+                              tr
+                                td.detail-features__table-head ЧАСТОТНЫЙ ДИАПАЗОН
+                                td.detail-features__table-data 900 / 1800
+                              tr
+                                td.detail-features__table-head ТИП SIM-КАРТЫ
+                                td.detail-features__table-data Mini-SIM(обычная)
+                              tr
+                                td.detail-features__table-head КОЛ-ВО SIM-КАРТ
+                                td.detail-features__table-data 2
+                          .detail-features__content
+                            table.detail-features__table
+                              tr
+                                td.detail-features__table-head ДИАГОНАЛЬ экрана
+                                td.detail-features__table-data 1.8"
+                              tr
+                                td.detail-features__table-head РАЗРЕШЕНИЕ экрана
+                                td.detail-features__table-data 160x128 пикс.
+                              tr
+                                td.detail-features__table-head ПАМЯТЬ ОПЕРАТИВНАЯ
+                                td.detail-features__table-data 24 Мб
+                              tr
+                                td.detail-features__table-head ПОДДЕРЖКА КАРТ ПАМЯТИ
+                                td.detail-features__table-data до 8 гб
+                              tr
+                                td.detail-features__table-head ТИП УСТРОЙСТВА
+                                td.detail-features__table-data телефон
+                              tr
+                                td.detail-features__table-head ЧАСТОТНЫЙ ДИАПАЗОН
+                                td.detail-features__table-data 900 / 1800
+                              tr
+                                td.detail-features__table-head ТИП SIM-КАРТЫ
+                                td.detail-features__table-data Mini-SIM(обычная)
+                              tr
+                                td.detail-features__table-head КОЛ-ВО SIM-КАРТ
+                                td.detail-features__table-data 2
+
+                        .detail-features__pagination
+                          .detail-features__arrow.detail-features__arrow_prev.icon-arrow
+                          .detail-features__arrow.detail-features__arrow_next.icon-arrow
+              tr.js-tab-parent
+                td(colspan='6')
+                  table.product-info.js-toggle-item
+                    tr.product-info__row
+                      td(data-col-1)
+                        .product-info__img-wrap
+                          img(src='img/product.jpg', alt='')
+                      td(data-col-2).align-left
+                        .product-info__product
+                          a.product-info__product-title(href='', title='') ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE
+                          .product-info__product-info Дисплей 1.8" (160x128, 262 тыс. цветов, 114ppi) / раскладушка / 2xSIM / FM-радио / Bluetooth v3.0 / 93x45x16.5 мм , 75 г
+                      td(data-col-3).product-info__values.align-left.product-info__price 2 529 ГРН.
+                      td(data-col-4).product-info__values.align-left.product-info__availability в наличии
+                      td(data-col-5).product-info__values.align-left.product-info__v-code 50932
+                      td(data-col-6).align-left
+                        .product-info__quantity.align-left.js-quantity 
+
+                  .product-more.js-toggle-drop
+                    .product-more__left.detail-img
+
+                      
+                      figure.detail-img__main.main-cart-img.js-detail-img-main
+                        .main-cart-img__item
+                          img(src="img/thumb-1.jpg" alt="")
+                        
+                        .main-cart-img__item
+                          img(src="img/thumb-2.jpg" alt="")
+                        
+                        .main-cart-img__item
+                          img(src="img/thumb-3.jpg" alt="")
+
+                      .detail-img__thumb.image-thumb
+                        .image-thumb__arrow.image-thumb__arrow_prev.icon-arrow
+                        .image-thumb__arrow.image-thumb__arrow_next.icon-arrow
+
+                        .image-thumb__wrap.js-detail-img-thumb
+                          .image-thumb__item
+                            img(src="img/thumb-1.jpg" alt="")
+                          .image-thumb__item
+                            img(src="img/thumb-1.jpg" alt="")
+                          .image-thumb__item
+                            img(src="img/thumb-1.jpg" alt="")
+                          
+                          .image-thumb__item
+                            img(src="img/thumb-2.jpg" alt="")
+                           
+                          .image-thumb__item
+                            img(src="img/thumb-3.jpg" alt="")
+                        
+                    .product-more__right
+                      .detail-features
+                        .detail-features__head
+                          .detail-features__title ALCATEL ONE TOUCH 1035D DUAL SIM PURE BLACK
+                          .detail-features__subtitle характеристики 
+                        .detail-features__body.js-detail-features
+                          .detail-features__content
+                            table.detail-features__table
+                              tr
+                                td.detail-features__table-head ТИП УСТРОЙСТВА
+                                td.detail-features__table-data телефон
+                              tr
+                                td.detail-features__table-head ЧАСТОТНЫЙ ДИАПАЗОН
+                                td.detail-features__table-data 900 / 1800
+                              tr
+                                td.detail-features__table-head ТИП SIM-КАРТЫ
+                                td.detail-features__table-data Mini-SIM(обычная)
+                              tr
+                                td.detail-features__table-head КОЛ-ВО SIM-КАРТ
+                                td.detail-features__table-data 2
+                              tr
+                                td.detail-features__table-head ДИАГОНАЛЬ экрана
+                                td.detail-features__table-data 1.8"
+                              tr
+                                td.detail-features__table-head РАЗРЕШЕНИЕ экрана
+                                td.detail-features__table-data 160x128 пикс.
+                              tr
+                                td.detail-features__table-head ПАМЯТЬ ОПЕРАТИВНАЯ
+                                td.detail-features__table-data 24 Мб
+                              tr
+                                td.detail-features__table-head ПОДДЕРЖКА КАРТ ПАМЯТИ
+                                td.detail-features__table-data до 8 гб
+                          .detail-features__content
+                            table.detail-features__table
+                              tr
+                                td.detail-features__table-head ДИАГОНАЛЬ экрана
+                                td.detail-features__table-data 1.8"
+                              tr
+                                td.detail-features__table-head РАЗРЕШЕНИЕ экрана
+                                td.detail-features__table-data 160x128 пикс.
+                              tr
+                                td.detail-features__table-head ПАМЯТЬ ОПЕРАТИВНАЯ
+                                td.detail-features__table-data 24 Мб
+                              tr
+                                td.detail-features__table-head ПОДДЕРЖКА КАРТ ПАМЯТИ
+                                td.detail-features__table-data до 8 гб
+                              tr
+                                td.detail-features__table-head ТИП УСТРОЙСТВА
+                                td.detail-features__table-data телефон
+                              tr
+                                td.detail-features__table-head ЧАСТОТНЫЙ ДИАПАЗОН
+                                td.detail-features__table-data 900 / 1800
+                              tr
+                                td.detail-features__table-head ТИП SIM-КАРТЫ
+                                td.detail-features__table-data Mini-SIM(обычная)
+                              tr
+                                td.detail-features__table-head КОЛ-ВО SIM-КАРТ
+                                td.detail-features__table-data 2
+                          .detail-features__content
+                            table.detail-features__table
+                              tr
+                                td.detail-features__table-head ДИАГОНАЛЬ экрана
+                                td.detail-features__table-data 1.8"
+                              tr
+                                td.detail-features__table-head РАЗРЕШЕНИЕ экрана
+                                td.detail-features__table-data 160x128 пикс.
+                              tr
+                                td.detail-features__table-head ПАМЯТЬ ОПЕРАТИВНАЯ
+                                td.detail-features__table-data 24 Мб
+                              tr
+                                td.detail-features__table-head ПОДДЕРЖКА КАРТ ПАМЯТИ
+                                td.detail-features__table-data до 8 гб
+                              tr
+                                td.detail-features__table-head ТИП УСТРОЙСТВА
+                                td.detail-features__table-data телефон
+                              tr
+                                td.detail-features__table-head ЧАСТОТНЫЙ ДИАПАЗОН
+                                td.detail-features__table-data 900 / 1800
+                              tr
+                                td.detail-features__table-head ТИП SIM-КАРТЫ
+                                td.detail-features__table-data Mini-SIM(обычная)
+                              tr
+                                td.detail-features__table-head КОЛ-ВО SIM-КАРТ
+                                td.detail-features__table-data 2
+
+                        .detail-features__pagination
+                          .detail-features__arrow.detail-features__arrow_prev.icon-arrow
+                          .detail-features__arrow.detail-features__arrow_next.icon-arrow
+              tr.js-tab-parent
+                td(colspan='6')
+                  table.product-info.js-toggle-item
+                    tr.product-info__row
+                      td(data-col-1)
+                        .product-info__img-wrap
+                          img(src='img/product.jpg', alt='')
+                      td(data-col-2).align-left
+                        .product-info__product
+                          a.product-info__product-title(href='', title='') ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE
+                          .product-info__product-info Дисплей 1.8" (160x128, 262 тыс. цветов, 114ppi) / раскладушка / 2xSIM / FM-радио / Bluetooth v3.0 / 93x45x16.5 мм , 75 г
+                      td(data-col-3).product-info__values.align-left.product-info__price 2 529 ГРН.
+                      td(data-col-4).product-info__values.align-left.product-info__availability в наличии
+                      td(data-col-5).product-info__values.align-left.product-info__v-code 50932
+                      td(data-col-6).align-left
+                        .product-info__quantity.align-left.js-quantity 
+
+                  .product-more.js-toggle-drop
                     .product-more__left.detail-img
 
                       

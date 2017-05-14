@@ -20,19 +20,31 @@ $(document).ready(function() {
 		nextArrow: $('.image-thumb__arrow_next')
 	});
 
-	$('.js-detail-features').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		vertical: true, 
-		infinite: true,
-		adaptiveHeight: true,
-		dots: true,
-		focusOnSelect: true,
-		dotsClass: 'detail-features__dots',
-		prevArrow: $('.detail-features__arrow_prev'),
-		nextArrow: $('.detail-features__arrow_next')
-	}); 
+	// $('.js-detail-features').each(function() {
+	// 	$(this).slick({
+	// 		slidesToShow: 1,
+	// 		slidesToScroll: 1,
+	// 		vertical: true, 
+	// 		infinite: false,
+	// 		adaptiveHeight: true,
+	// 		dots: true,
+	// 		focusOnSelect: true,
+	// 		dotsClass: 'detail-features__dots',
+	// 		prevArrow: $('.detail-features__arrow_prev'),
+	// 		nextArrow: $('.detail-features__arrow_next') 
+	// 	}); 
+	// })
 
+	// function slideArrow(btnClass) {
+	// 	let parent = $(this).closest('.js-detail-features');
+
+	// 	// return parent.find(btnClass).css('class');
+
+	// 	console.log( parent );
+	// }
+
+
+// slideArrow();
 })
 
 

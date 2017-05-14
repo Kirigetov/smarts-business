@@ -6,9 +6,6 @@ $(document).ready(function() {
 	});
 
 
-    // scroll sidebar
-    $('.js-scroll-sidebar').perfectScrollbar();
-
 	// show/hide dropdown in navigation
 	function initSubmenuToggle() {
 		var navLink = $('.js-nav-link'),
@@ -20,6 +17,7 @@ $(document).ready(function() {
 		var hideCurrentNavDrop = function() {
 			navLink.removeClass(active);
 			navDrop.removeClass(active);
+
 		};
 
 		var showNavDrop = function(el) {
@@ -30,17 +28,24 @@ $(document).ready(function() {
 
 		navLink.click(function(evt) {
 
-			if ( $(this).siblings(navDrop).length ) {
-				evt.preventDefault();
-				var isActive = $(this).hasClass(active);
+            if ( $(this).siblings(navDrop).length ) {
+                evt.preventDefault();
+                var isActive = $(this).hasClass(active);
 
-				hideCurrentNavDrop();
-				if ( !isActive ) showNavDrop($(this));
-			} else {
-				hideCurrentNavDrop();
-				$(this).addClass(active);
-			}
-		});
+                hideCurrentNavDrop();
+                if ( !isActive ) showNavDrop($(this));
+            } else {
+                hideCurrentNavDrop();
+                $(this).addClass(active);
+            }
+            if ($(this).hasClass(active)) {
+                $('.js-scroll-sidebar').perfectScrollbar({
+                    suppressScrollX: true
+                });
+            } else{
+               $('.js-scroll-sidebar').perfectScrollbar('destroy'); 
+            }
+        });
 
 
 		subnavLink.click(function(evt) {
@@ -96,25 +101,67 @@ $(document).ready(function() {
         });
     };
 
-    (function reasonTabs() {
+    (function tableTabs() {
+        var allTabs = $('.js-tab-parent'),
+            allTabsContent = allTabs.find('.js-toggle-drop');
+
+            if (!(allTabs).hasClass('is-active') ) {
+                allTabsContent.slideUp();
+            }
+
         $('.js-toggle-item').click(function(e) {
-            e.preventDefault();
 
             var _this = $(this),
-                p = _this.parent(),
-                siblings = p.siblings();
+                parentTab = _this.closest('.js-tab-parent'),
+                siblingsTab = parentTab.siblings(),
+                tabContent = parentTab.find( $('.js-toggle-drop') ),
+                active = 'is-active',
+                flag = false;
 
-            siblings.find( $('.js-toggle-drop') ).slideUp();
-            siblings.find( $('.js-toggle-drop') ).removeClass('is-active');
-            p.toggleClass('is-active');
-            p.find( $('.js-toggle-drop') ).slideDown();
-            siblings.removeClass('is-active');
+            e.preventDefault();
+            
+
+            siblingsTab.find( $('.js-toggle-drop') ).slideUp()
+                                                 .removeClass(active);
+            if ( !(parentTab.hasClass(active)) ) {
+                parentTab.addClass(active);
+                tabContent.slideDown().addClass(active);
+
+                flag = true;
+
+            } else {
+                parentTab.removeClass(active);
+                tabContent.slideUp().removeClass(active);
+
+                flag = false;
+
+                $('.js-detail-features').slick('unslick');
+            };
+
+            siblingsTab.removeClass(active);
+
+            if (flag) {
+                $('.js-detail-features').each(function() {
+                    $(this).slick({
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        vertical: true, 
+                        infinite: false,
+                        adaptiveHeight: true,
+                        dots: true,
+                        focusOnSelect: true,
+                        dotsClass: 'detail-features__dots',
+                        prevArrow: $('.detail-features__arrow_prev'),
+                        nextArrow: $('.detail-features__arrow_next') 
+                    }); 
+                })
+            };
 
         });
     })();
 
     $('.js-drop-popup').on('click', function(){
-        $(this).parent().toggleClass('is-active');
+        $(this).parent().toggleClass(active);
     });
 
     (function init() {

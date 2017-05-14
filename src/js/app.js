@@ -10,4 +10,4 @@
 //=include common.js 
 //=include component/toggle.js 
 //=include component/noUiSlider.js 
-//=include component/sliders.js                
+//=include component/sliders.js                 
