@@ -2649,6 +2649,8 @@ $(document).ready(function() {
             }
 
         $('.js-toggle-item').click(function(e) {
+            
+            e.preventDefault();
 
             var _this = $(this),
                 parentTab = _this.closest('.js-tab-parent'),
@@ -2656,13 +2658,15 @@ $(document).ready(function() {
                 tabContent = parentTab.find( $('.js-toggle-drop') ),
                 active = 'is-active',
                 flag = false, 
-                currentSlide = parentTab.find('.js-detail-features');
-
-            e.preventDefault();
-            
+                sliderTable = parentTab.find('.js-detail-features'),
+                sliderPreview = parentTab.find('.js-detail-img-main'),
+                sliderNav = parentTab.find('.js-detail-img-thumb'),
+                arrowPrev = parentTab.find('.detail-features__arrow_prev'),
+                arrowNext = parentTab.find('.detail-features__arrow_next');
 
             siblingsTab.find( $('.js-toggle-drop') ).slideUp()
-                                                 .removeClass(active);
+                                                    .removeClass(active);
+
             if ( !(parentTab.hasClass(active)) ) {
                 parentTab.addClass(active);
                 tabContent.slideDown().addClass(active);
@@ -2679,33 +2683,71 @@ $(document).ready(function() {
             siblingsTab.removeClass(active);
 
             if (flag) {
-                $(currentSlide).each(function() {
-                    $(this).slick({
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                        vertical: true, 
-                        infinite: false,
-                        adaptiveHeight: true,
-                        dots: true,
-                        focusOnSelect: true,
-                        dotsClass: 'detail-features__dots',
-                        prevArrow: $('.detail-features__arrow_prev'),
-                        nextArrow: $('.detail-features__arrow_next') 
-                    }); 
-                })
             };
+
+            $(sliderPreview).slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                draggable: false,
+                arrows: false,
+                fade: true,
+                asNavFor: '.js-detail-img-thumb'
+            });
+
+            $(sliderNav).slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.js-detail-img-main',
+                vertical: true, 
+                dots: false,
+                focusOnSelect: true,
+                prevArrow: $('.image-thumb__arrow_prev'),
+                nextArrow: $('.image-thumb__arrow_next')
+            });
+
+            $(sliderTable).slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                vertical: true, 
+                infinite: true,
+                draggable: false,
+                adaptiveHeight: true,
+                dots: true,
+                focusOnSelect: true,
+                dotsClass: 'detail-features__dots',
+                prevArrow: arrowPrev,
+                nextArrow: arrowNext 
+            }); 
+
+        });
+    };
+
+    function showSubmenu() {
+        $('.js-toggle-item').click(function(e) {
+            e.preventDefault();
+
+            var _this = $(this),
+                p = _this.parent(),
+                siblings = p.siblings();
+
+            siblings.find( $('.js-toggle-drop') ).slideUp();
+            siblings.find( $('.js-toggle-drop') ).removeClass('is-active');
+            p.toggleClass('is-active');
+            p.find( $('.js-toggle-drop') ).slideDown();
+            siblings.removeClass('is-active');
 
         });
     };
 
     $('.js-drop-popup').on('click', function(){
-        $(this).parent().toggleClass(active);
+        $(this).parent().toggleClass('is-active');
     });
 
     (function init() {
 	   initSubmenuToggle();
        switchSidebarTab();
        tableTabs();
+       showSubmenu();
     })();
 
 });
@@ -2872,53 +2914,53 @@ $(slider).each(function(i, item) {
 
 
 });
-$(document).ready(function() {
+// $(document).ready(function() {
 
-	$('.js-detail-img-main').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		draggable: false,
-		arrows: false,
-		fade: true,
-		asNavFor: '.js-detail-img-thumb'
-	});
+// 	// $('.js-detail-img-main').slick({
+// 	// 	slidesToShow: 1,
+// 	// 	slidesToScroll: 1,
+// 	// 	draggable: false,
+// 	// 	arrows: false,
+// 	// 	fade: true,
+// 	// 	asNavFor: '.js-detail-img-thumb'
+// 	// });
 
-	$('.js-detail-img-thumb').slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		asNavFor: '.js-detail-img-main',
-		vertical: true, 
-		dots: false,
-		focusOnSelect: true,
-		prevArrow: $('.image-thumb__arrow_prev'),
-		nextArrow: $('.image-thumb__arrow_next')
-	});
+// 	// $('.js-detail-img-thumb').slick({
+// 	// 	slidesToShow: 3,
+// 	// 	slidesToScroll: 1,
+// 	// 	asNavFor: '.js-detail-img-main',
+// 	// 	vertical: true, 
+// 	// 	dots: false,
+// 	// 	focusOnSelect: true,
+// 	// 	prevArrow: $('.image-thumb__arrow_prev'),
+// 	// 	nextArrow: $('.image-thumb__arrow_next')
+// 	// });
 
-	// $('.js-detail-features').each(function() {
-	// 	$(this).slick({
-	// 		slidesToShow: 1,
-	// 		slidesToScroll: 1,
-	// 		vertical: true, 
-	// 		infinite: false,
-	// 		adaptiveHeight: true,
-	// 		dots: true,
-	// 		focusOnSelect: true,
-	// 		dotsClass: 'detail-features__dots',
-	// 		prevArrow: $('.detail-features__arrow_prev'),
-	// 		nextArrow: $('.detail-features__arrow_next') 
-	// 	}); 
-	// })
+// 	// $('.js-detail-features').each(function() {
+// 	// 	$(this).slick({
+// 	// 		slidesToShow: 1,
+// 	// 		slidesToScroll: 1,
+// 	// 		vertical: true, 
+// 	// 		infinite: false,
+// 	// 		adaptiveHeight: true,
+// 	// 		dots: true,
+// 	// 		focusOnSelect: true,
+// 	// 		dotsClass: 'detail-features__dots',
+// 	// 		prevArrow: $('.detail-features__arrow_prev'),
+// 	// 		nextArrow: $('.detail-features__arrow_next') 
+// 	// 	}); 
+// 	// })
 
-	// function slideArrow(btnClass) {
-	// 	let parent = $(this).closest('.js-detail-features');
+// 	// function slideArrow(btnClass) {
+// 	// 	let parent = $(this).closest('.js-detail-features');
 
-	// 	// return parent.find(btnClass).css('class');
+// 	// 	// return parent.find(btnClass).css('class');
 
-	// 	console.log( parent );
-	// }
+// 	// 	console.log( parent );
+// 	// }
 
 
-// slideArrow();
-})
+// // slideArrow();
+// })
 
 
