@@ -2691,13 +2691,13 @@ $(document).ready(function() {
                 draggable: false,
                 arrows: false,
                 fade: true,
-                asNavFor: '.js-detail-img-thumb'
+                asNavFor: sliderNav
             });
 
             $(sliderNav).slick({
                 slidesToShow: 3,
                 slidesToScroll: 1,
-                asNavFor: '.js-detail-img-main',
+                asNavFor: sliderPreview,
                 vertical: true, 
                 dots: false,
                 focusOnSelect: true,
