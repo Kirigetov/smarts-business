@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Главная страница</title>
+    <title>Список товаров</title>
     <meta name="viewport" content="width=1200">
     <meta name="format-detection" content="telephone=no">
     <link rel="stylesheet" media="all" href="css/style.css">
@@ -76,43 +76,43 @@
                         </div>
                         <div class="popup-bl__body">
                           <div class="order">
-                            <table class="order__table">
+                            <table class="order-table">
                               <tr>
-                                <th class="order__thead">ФОТО</th>
-                                <th class="order__thead">НАЗВАНИЕ / КОД</th>
-                                <th class="order__thead align-left">КОЛ-ВО</th>
-                                <th class="order__thead align-left">ЦЕНА</th>
-                                <th class="order__thead align-left">ИТОГО </th>
+                                <th class="order-table__thead">ФОТО</th>
+                                <th class="order-table__thead">НАЗВАНИЕ / КОД</th>
+                                <th class="order-table__thead align-left">КОЛ-ВО</th>
+                                <th class="order-table__thead align-left">ЦЕНА</th>
+                                <th class="order-table__thead align-left">ИТОГО </th>
                               </tr>
                               <tr>
                                 <td>
-                                  <div class="order__img-wrap"><img src="img/product.jpg" alt=""></div>
+                                  <div class="order-table__img-wrap"><img src="img/product.jpg" alt=""></div>
                                 </td>
                                 <td class="align-left">
-                                  <div class="order__product"><a class="order__product-title" href="" title="">ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE</a>
-                                    <div class="order__product-code">КОД ТОВАРА: TLG12345</div>
+                                  <div class="order-table__desc"><a class="order-table__desc-title" href="" title="">ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE</a>
+                                    <div class="order-table__desc-info">КОД ТОВАРА: TLG12345</div>
                                   </div>
                                 </td>
                                 <td class="align-left">
-                                  <div class="order__quantity align-left js-quantity"> </div>
+                                  <div class="order-table__quantity align-left js-quantity"> </div>
                                 </td>
-                                <td class="order__values align-left order__price">25 099 ГРН.</td>
-                                <td class="order__values align-left order__sum">50 198 ГРН.</td>
+                                <td class="order-table__values align-left order-table__price">25 099 ГРН.</td>
+                                <td class="order-table__values align-left order-table__sum">50 198 ГРН.</td>
                               </tr>
                               <tr>
                                 <td>
-                                  <div class="order__img-wrap"><img src="img/product.jpg" alt=""></div>
+                                  <div class="order-table__img-wrap"><img src="img/product.jpg" alt=""></div>
                                 </td>
                                 <td class="align-left">
-                                  <div class="order__product"><a class="order__product-title" href="" title="">ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE</a>
-                                    <div class="order__product-code">КОД ТОВАРА: TLG12345</div>
+                                  <div class="order-table__desc"><a class="order-table__desc-title" href="" title="">ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE</a>
+                                    <div class="order-table__desc-info">КОД ТОВАРА: TLG12345</div>
                                   </div>
                                 </td>
                                 <td class="align-left">
-                                  <div class="order__quantity align-left js-quantity"> </div>
+                                  <div class="order-table__quantity align-left js-quantity"> </div>
                                 </td>
-                                <td class="order__values align-left order__price">12 198 ГРН.</td>
-                                <td class="order__values align-left order__sum">12 198 ГРН.</td>
+                                <td class="order-table__values align-left order-table__price">25 099 ГРН.</td>
+                                <td class="order-table__values align-left order-table__sum">50 198 ГРН.</td>
                               </tr>
                             </table>
                             <div class="order__row">
@@ -143,6 +143,9 @@
                   <div class="s-tabs__body js-scroll-sidebar">
                     <div class="s-tabs__content js-tabs-content"></div>
                     <div class="s-tabs__content js-tabs-content">
+                      <div class="filter-btn-wrap">
+                        <button class="filter-reset"> <span class="filter-reset__text">Сбросить фильтр</span><span class="filter-reset__img icon-garbage"></span></button>
+                      </div>
                       <div class="s-filters">
                         <div class="s-filter s-filter_static">
                           <div class="s-filter__title"> <span>Производитель:</span></div>
@@ -223,14 +226,57 @@
                             </li>
                             <li class="s-filter__item">
                               <label class="checkbox">
-                                <input type="checkbox"><span class="checkbox__text">только доступные<span class="checkbox__tooltip"><span class="checkbox__tooltip-find">Найдено 132</span><a class="checkbox__tooltip-link" href="">показать</a></span></span>
+                                <input type="checkbox"><span class="checkbox__text">только доступные<span class="checkbox__tooltip checkbox__tooltip_top"><span class="checkbox__tooltip-find">Найдено 132</span><a class="checkbox__tooltip-link" href="">показать</a></span></span>
                               </label>
                             </li>
                           </ul>
                         </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Диагональ дисплея</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop"></ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Тип дисплея</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop"></ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Разрешение экрана</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop"></ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Тип связи</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop"></ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Количество SIM-карт</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop"></ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Объем памяти</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop"></ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Оперативная память</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop"></ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Фронтальная камера</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop"></ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Цвет</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop"></ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Емкость аккумулятора</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop"></ul>
+                        </div>
                       </div>
                     </div>
                   </div>
+                </div>
+                <div class="filter-btn-wrap filter-btn-wrap_center">
+                  <button class="filter-apply"><span class="filter-apply__img icon-check"></span><span class="filter-apply__text">Применить</span></button>
                 </div><a class="price-list" href="" title=""><span class="price-list__img icon-price"></span><span class="price-list__title">Скачать прайс-лист</span></a>
               </div>
             </div>
@@ -240,11 +286,27 @@
               </section>
               <div class="order-table order-table_prod-list">
                 <table>
-                  <tr>
+                  <tr> 
                     <th class="order-table__thead" data-col-1>ФОТО</th>
                     <th class="order-table__thead align-left" data-col-2>НАЗВАНИЕ/ОПИСАНИЕ</th>
-                    <th class="order-table__thead align-left" data-col-3>ЦЕНА</th>
-                    <th class="order-table__thead align-left" data-col-4>НАЛИЧИЕ </th>
+                    <th class="order-table__thead align-left" data-col-3> 
+                      <div class="sorter">
+                        <div class="sorter__title">ЦЕНА</div>
+                        <ul class="sorter__list">
+                          <li class="sorter__item"><a class="sorter__link" href="">Сортировать по возрастанию</a></li>
+                          <li class="sorter__item"><a class="sorter__link" href="">Сортировать по убыванию</a></li>
+                        </ul>
+                      </div>
+                    </th>
+                    <th class="order-table__thead align-left" data-col-4> 
+                      <div class="sorter">
+                        <div class="sorter__title">НАЛИЧИЕ</div>
+                        <ul class="sorter__list">
+                          <li class="sorter__item"><a class="sorter__link" href="">В наличии</a></li>
+                          <li class="sorter__item"><a class="sorter__link" href="">Нет в наличии</a></li>
+                        </ul>
+                      </div>
+                    </th>
                     <th class="order-table__thead align-left" data-col-5>КОД</th>
                     <th class="order-table__thead align-left" data-col-6>КОЛ-ВО</th>
                   </tr>
@@ -256,8 +318,8 @@
                             <div class="product-info__img-wrap"><img src="img/product.jpg" alt=""></div>
                           </td>
                           <td class="align-left" data-col-2>
-                            <div class="product-info__product"><a class="product-info__product-title js-toggle-item" href="" title="">ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE</a>
-                              <div class="product-info__product-info">Дисплей 1.8" (160x128, 262 тыс. цветов, 114ppi) / раскладушка / 2xSIM / FM-радио / Bluetooth v3.0 / 93x45x16.5 мм , 75 г</div>
+                            <div class="product-info__desc"><a class="product-info__desc-title js-toggle-item" href="" title="">ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE</a>
+                              <div class="product-info__desc-info">Дисплей 1.8" (160x128, 262 тыс. цветов, 114ppi) / раскладушка / 2xSIM / FM-радио / Bluetooth v3.0 / 93x45x16.5 мм , 75 г</div>
                             </div>
                           </td>
                           <td class="product-info__values align-left product-info__price" data-col-3>2 529 ГРН.</td>
@@ -422,8 +484,8 @@
                             <div class="product-info__img-wrap"><img src="img/product.jpg" alt=""></div>
                           </td>
                           <td class="align-left" data-col-2>
-                            <div class="product-info__product"><a class="product-info__product-title js-toggle-item" href="" title="">ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE</a>
-                              <div class="product-info__product-info">Дисплей 1.8" (160x128, 262 тыс. цветов, 114ppi) / раскладушка / 2xSIM / FM-радио / Bluetooth v3.0 / 93x45x16.5 мм , 75 г</div>
+                            <div class="product-info__desc"><a class="product-info__desc-title js-toggle-item" href="" title="">ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE</a>
+                              <div class="product-info__desc-info">Дисплей 1.8" (160x128, 262 тыс. цветов, 114ppi) / раскладушка / 2xSIM / FM-радио / Bluetooth v3.0 / 93x45x16.5 мм , 75 г</div>
                             </div>
                           </td>
                           <td class="product-info__values align-left product-info__price" data-col-3>2 529 ГРН.</td>
@@ -588,8 +650,8 @@
                             <div class="product-info__img-wrap"><img src="img/product.jpg" alt=""></div>
                           </td>
                           <td class="align-left" data-col-2>
-                            <div class="product-info__product"><a class="product-info__product-title js-toggle-item" href="" title="">ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE</a>
-                              <div class="product-info__product-info">Дисплей 1.8" (160x128, 262 тыс. цветов, 114ppi) / раскладушка / 2xSIM / FM-радио / Bluetooth v3.0 / 93x45x16.5 мм , 75 г</div>
+                            <div class="product-info__desc"><a class="product-info__desc-title js-toggle-item" href="" title="">ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE</a>
+                              <div class="product-info__desc-info">Дисплей 1.8" (160x128, 262 тыс. цветов, 114ppi) / раскладушка / 2xSIM / FM-радио / Bluetooth v3.0 / 93x45x16.5 мм , 75 г</div>
                             </div>
                           </td>
                           <td class="product-info__values align-left product-info__price" data-col-3>2 529 ГРН.</td>
@@ -747,6 +809,20 @@
                     </td>
                   </tr>
                 </table>
+              </div>
+              <div class="pagination-wrap">
+                <ul class="pagination">
+                  <li class="pagination__item pagination__prev"><a href="#"><i class="icon-arrow-corner"></i></a></li>
+                  <li class="pagination__item"><a href="#">1</a></li>
+                  <li class="pagination__item"><a href="#">2</a></li>
+                  <li class="pagination__item"><a href="#">3</a></li>
+                  <li class="pagination__item"><a href="#">4</a></li>
+                  <li class="pagination__item is-active"> <a href="#">5</a></li>
+                  <li class="pagination__item"><a href="#">6</a></li>
+                  <li class="pagination__item"><a href="#">7</a></li>
+                  <li class="pagination__item"> <a href="#">8</a></li>
+                  <li class="pagination__item pagination__next"><a href="#"><i class="icon-arrow-corner"></i></a></li>
+                </ul>
               </div>
             </div>
           </div>

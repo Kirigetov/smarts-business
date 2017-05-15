@@ -61,7 +61,7 @@
         top: 50%
         transform: translateY(-50%) 
         min-width: 100px
-        padding: 5px 10px
+        padding: 7px 10px
         border-radius: 3px
         background: #FFF 
         box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1)
@@ -87,6 +87,16 @@
             +bold
         &-link
             color: #cc2b23
+    
+    &__tooltip_top 
+        left: 50%
+        top: auto
+        bottom: 180% 
+        transform: translateX(-50%)  
+        &:before
+            right: 50%
+            top: 100%  
+            margin-top: -6px 
 
 .tag
     position: relative
@@ -269,7 +279,39 @@
             border: 4px solid transparent
             border-top: 4px solid #f3db0e 
 
+.order
+    &__row
+        +clr
+        &:not(:last-child)
+            margin-bottom: 15px
+    &__all-sum
+        float: right
+        display: inline-block
+        padding: 13px 20px 
+        background-color: #f4f4f4
+        white-space: nowrap
+        &-text, &-value
+            display: inline-block
+            font-size: 19px
+            +bold
+            color: #333
+            text-transform: uppercase
+        &-text
+            margin-right: 10px
+
+    &__submit
+        float: right
+        height: 25px 
+        line-height: 25px
+        padding: 0 17px
+        background-color: #376c2c
+        border-radius: 4px
+        font-size: 10px
+        +bold
+        color: #FFF 
+
 .order-table
+    margin-bottom: 15px
     +clr
     &_prod-list
         border-radius: 6px
@@ -280,22 +322,50 @@
         background-color: #f4f4f4
         color: #333
         font-size: 10px
-        &.align-left
-            text-align: left
         &:first-child
             border-radius: 4px 0 0 4px
         &:last-child
             border-radius: 0 4px 4px 0 
+
+    &__img-wrap 
+        margin: 0 auto 
+        height: 47px 
+        width: 47px 
+        border: 1px solid #ddd
+        img
+            width: auto 
+            max-width: 100% 
+            height: 100% 
+            
+    &__desc  
+        text-align: left
+        &-title, &-info
+            text-transform: uppercase
+            +bold
+        &-title
+            color: #cc2b23
+            font-size: 13px
+            text-decoration: none
+            &:hover
+                text-decoration: underline    
+        &-info
+            color: #333
+            font-size: 10px
+    &__values
+        color: #333
+        font-size: 13px
+        +bold
+
+        
     table
         width: 100% 
         table-layout: fixed 
-    th, td
+    th
+        height: 34px
+        line-height: 34px
+        padding: 0 5px 
+    td
         padding: 10px 5px
-    &__row
-        &:first-child
-            td
-                padding-top: 20px
-                padding-bottom: 10px 
     td[colspan]
         padding: 0
     td
@@ -329,8 +399,52 @@
         width: 10% 
         padding-right: 20px
 
+.align-left
+    text-align: left
+
+.sorter
+    position: relative
+    cursor: pointer
+    &__title
+        &:after
+            content: ""
+            display: inline-block
+            margin-left: 8px
+            padding-top: 7px
+            +s('chevron-down-red')
+    &__list
+        position: absolute
+        top: 100%
+        left: 0
+        z-index: 10
+        opacity: 0 
+        min-width: 200px 
+        visibility: hidden 
+        transition: opacity .2s
+    &__item
+        background: #f8f8f8
+        transition: background .2s
+        &:hover
+            background: #ECECEC 
+    &__link
+        display: block
+        position: relative
+        height: 40px  
+        line-height: 40px
+        padding: 0 10px
+        font-size: 10px 
+        text-transform: uppercase
+        text-decoration: none 
+        
+    &:hover
+        .sorter__list
+            opacity: 1
+            visibility: visible
+
+
 .product-info
     width: 100% 
+
     &__img-wrap 
         margin: 0 auto 
         height: 47px 
@@ -341,7 +455,7 @@
             max-width: 100% 
             height: 100% 
             
-    &__product  
+    &__desc  
         text-align: left
         &-title, &-info
             text-transform: uppercase
@@ -355,7 +469,6 @@
         &-info
             color: #333
             font-size: 10px
-        &-feature 
 
     &__values
         color: #333
@@ -401,3 +514,54 @@
         width: 320px 
     &__right
         margin-left: 340px
+
+.pagination-wrap
+    margin: 20px 0
+
+.pagination
+    font-size: 0
+    text-align: center
+    clear: both
+    .icon-arrow-corner
+        position: absolute
+        top: 50%
+        left: 45%
+        transform: translate(-50%, -50%)
+    &__item
+        display: inline-block
+        vertical-align: top 
+        margin: 0 10px
+        a
+            display: inline-block
+            width: 32px
+            height: 32px
+            line-height: 32px
+            border-radius: 3px
+            text-align: center
+            font-size: 15px
+            +bold
+            color: #252525
+            cursor: pointer
+            transition: color 0.3s, background 0.3s
+            text-decoration: none 
+            &:hover
+                color: #fff
+                background-color: #cc2b23
+    &__prev, &__next
+        a
+            position: relative
+            color: #cc2b23
+    &__prev
+        margin-right: 30px
+        display: inline-block
+        .icon-arrow-corner
+            top: 48% 
+    &__next
+        display: inline-block
+        margin-left: 30px
+        a
+            transform: rotate(180deg) 
+    .is-active
+        a
+            color: #fff
+            background-color: #cc2b23

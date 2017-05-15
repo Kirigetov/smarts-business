@@ -2545,27 +2545,30 @@ $(document).ready(function() {
 	});
 
 
-	// show/hide dropdown in navigation
-	function initSubmenuToggle() {
-		var navLink = $('.js-nav-link'),
-			subnavLink = $('.js-subnav-link'),
-			navDrop = $('.js-navdrop'),
-			active = 'is-active',
-			subDrop = $('.js-subnav-drop');
+    $('.js-scroll-sidebar').perfectScrollbar({
+        suppressScrollX: true
+    });
+    // show/hide dropdown in navigation
+    function initSubmenuToggle() {
+        var navLink = $('.js-nav-link'),
+            subnavLink = $('.js-subnav-link'),
+            navDrop = $('.js-navdrop'),
+            active = 'is-active',
+            subDrop = $('.js-subnav-drop');
 
-		var hideCurrentNavDrop = function() {
-			navLink.removeClass(active);
-			navDrop.removeClass(active);
+        var hideCurrentNavDrop = function() {
+            navLink.removeClass(active);
+            navDrop.removeClass(active);
 
-		};
+        };
 
-		var showNavDrop = function(el) {
+        var showNavDrop = function(el) {
 
-			$(el).addClass(active);
-			$(el).parent().find(navDrop).addClass(active);
-		};
+            $(el).addClass(active);
+            $(el).parent().find(navDrop).addClass(active);
+        };
 
-		navLink.click(function(evt) {
+        navLink.click(function(evt) {
 
             if ( $(this).siblings(navDrop).length ) {
                 evt.preventDefault();
@@ -2577,13 +2580,10 @@ $(document).ready(function() {
                 hideCurrentNavDrop();
                 $(this).addClass(active);
             }
-            if ($(this).hasClass(active)) {
-                $('.js-scroll-sidebar').perfectScrollbar({
-                    suppressScrollX: true
-                });
-            } else{
-               $('.js-scroll-sidebar').perfectScrollbar('destroy'); 
-            }
+            // if ($(this).hasClass(active)) {
+            // } else{
+            //    $('.js-scroll-sidebar').perfectScrollbar('destroy'); 
+            // }
         });
 
 
@@ -2914,53 +2914,3 @@ $(slider).each(function(i, item) {
 
 
 });
-// $(document).ready(function() {
-
-// 	// $('.js-detail-img-main').slick({
-// 	// 	slidesToShow: 1,
-// 	// 	slidesToScroll: 1,
-// 	// 	draggable: false,
-// 	// 	arrows: false,
-// 	// 	fade: true,
-// 	// 	asNavFor: '.js-detail-img-thumb'
-// 	// });
-
-// 	// $('.js-detail-img-thumb').slick({
-// 	// 	slidesToShow: 3,
-// 	// 	slidesToScroll: 1,
-// 	// 	asNavFor: '.js-detail-img-main',
-// 	// 	vertical: true, 
-// 	// 	dots: false,
-// 	// 	focusOnSelect: true,
-// 	// 	prevArrow: $('.image-thumb__arrow_prev'),
-// 	// 	nextArrow: $('.image-thumb__arrow_next')
-// 	// });
-
-// 	// $('.js-detail-features').each(function() {
-// 	// 	$(this).slick({
-// 	// 		slidesToShow: 1,
-// 	// 		slidesToScroll: 1,
-// 	// 		vertical: true, 
-// 	// 		infinite: false,
-// 	// 		adaptiveHeight: true,
-// 	// 		dots: true,
-// 	// 		focusOnSelect: true,
-// 	// 		dotsClass: 'detail-features__dots',
-// 	// 		prevArrow: $('.detail-features__arrow_prev'),
-// 	// 		nextArrow: $('.detail-features__arrow_next') 
-// 	// 	}); 
-// 	// })
-
-// 	// function slideArrow(btnClass) {
-// 	// 	let parent = $(this).closest('.js-detail-features');
-
-// 	// 	// return parent.find(btnClass).css('class');
-
-// 	// 	console.log( parent );
-// 	// }
-
-
-// // slideArrow();
-// })
-
-
