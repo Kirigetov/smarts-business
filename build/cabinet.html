@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Личный кабинет</title>
+    <meta name="viewport" content="width=1200">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/style.css">
+    <script src="js/app.js"></script>
+  </head>
+  <body>
+    <!--BEGIN out-->
+    <div class="out out_pad_top">
+      <div class="main-container">
+        <div class="header-container">
+          <div class="container">
+            <div class="header js-header">
+              <div class="header__section header__section_left">
+                <div class="header__logo logo"><a href="" title=""><img src="img/logo-business.png" alt="logo"></a></div>
+                <div class="header__menu">
+                  <nav class="nav">
+                    <div class="nav__item"><a class="nav__link js-toggle-item" href="" title=""> <span class="nav__link-img icon-manager"></span><span class="nav__link-text">ВАШ МЕНЕДЖЕР</span></a>
+                      <div class="nav__dropdown js-toggle-drop">
+                        <ul class="sub-nav">
+                          <li class="sub-nav__item"><span class="sub-nav__type">Имя: </span><span class="sub-nav__data">Греков Роман </span></li>
+                          <li class="sub-nav__item"><span class="sub-nav__type">Телефон: </span><span class="sub-nav__data">0669263171</span></li>
+                          <li class="sub-nav__item"><span class="sub-nav__type">E-mail: </span><span class="sub-nav__data">r.grekov@telemart.com.ua </span></li>
+                          <li class="sub-nav__item"><span class="sub-nav__type">Skype: </span><span class="sub-nav__data">g.r.e.c.h.a </span></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="nav__item"><a class="nav__link js-toggle-item" href="" title=""> <span class="nav__link-img icon-dollar"></span><span class="nav__link-text">ФИНАНСЫ</span></a>
+                      <div class="nav__dropdown js-toggle-drop">
+                        <ul class="sub-nav">
+                          <li class="sub-nav__item"><span class="sub-nav__type">Курс USD: </span><span class="sub-nav__data sub-nav__data_bold">26.80/26.80</span></li>
+                          <li class="sub-nav__item"><span class="sub-nav__type">Сверка: </span><a class="sub-nav__link" href="" title="">скачать</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="nav__item"><a class="nav__link js-toggle-item" href="" title=""> <span class="nav__link-img icon-cabinet"></span><span class="nav__link-text">МОЙ КАБИНЕТ</span></a>
+                      <div class="nav__dropdown js-toggle-drop">
+                        <ul class="sub-nav">
+                          <li class="sub-nav__item"><a class="sub-nav__link" href="" title="">Буряк М.В.</a></li>
+                          <li class="sub-nav__item"><a class="sub-nav__link" href="" title="">Мои заказы</a></li>
+                        </ul><a class="nav__dropdown-exit" href="" title=""> <span>Выйти</span><span class="icon-exit"></span></a>
+                      </div>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+              <div class="header__section header__section_right">
+                <div class="header__search">
+                  <form class="search">
+                    <button class="search__btn icon-search" type="button">search</button>
+                    <input class="search__input" type="text" placeholder="Поиск...">
+                  </form>
+                </div>
+                <div class="header__basket">
+                  <div class="basket">
+                    <div class="basket__btn js-drop-popup"></div>
+                    <div class="basket__row basket__row_mb">
+                      <div class="basket__img icon-bag"></div>
+                      <div class="basket__value">2 позиции </div>
+                    </div>
+                    <div class="basket__row">
+                      <div class="basket__sum">93 939 грн.</div>
+                    </div>
+                    <div class="popup-bl popup-bl-basket w776 js-toggle-drop">
+                      <div class="popup-bl__inner">
+                        <div class="popup-bl__head">
+                          <div class="popup-bl__title">Состав Вашего заказа</div>
+                          <div class="popup-bl__user user-auth">
+                            <div class="user-auth__img"><img src="img/user.png" title=""></div>
+                            <div class="user-auth__text"><span>Вы зашли как: </span><a class="user-auth__link" href="" title="">Буряк М.В.</a></div>
+                          </div>
+                        </div>
+                        <div class="popup-bl__body">
+                          <div class="order">
+                            <table class="order-table">
+                              <tr>
+                                <th class="order-table__thead">ФОТО</th>
+                                <th class="order-table__thead">НАЗВАНИЕ / КОД</th>
+                                <th class="order-table__thead align-left">КОЛ-ВО</th>
+                                <th class="order-table__thead align-left">ЦЕНА</th>
+                                <th class="order-table__thead align-left">ИТОГО </th>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="order-table__img-wrap"><img src="img/product.jpg" alt=""></div>
+                                </td>
+                                <td class="align-left">
+                                  <div class="order-table__desc"><a class="order-table__desc-title" href="" title="">ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE</a>
+                                    <div class="order-table__desc-info">КОД ТОВАРА: TLG12345</div>
+                                  </div>
+                                </td>
+                                <td class="align-left">
+                                  <div class="order-table__quantity align-left js-quantity"> </div>
+                                </td>
+                                <td class="order-table__values align-left order-table__price">25 099 ГРН.</td>
+                                <td class="order-table__values align-left order-table__sum">50 198 ГРН.</td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <div class="order-table__img-wrap"><img src="img/product.jpg" alt=""></div>
+                                </td>
+                                <td class="align-left">
+                                  <div class="order-table__desc"><a class="order-table__desc-title" href="" title="">ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE</a>
+                                    <div class="order-table__desc-info">КОД ТОВАРА: TLG12345</div>
+                                  </div>
+                                </td>
+                                <td class="align-left">
+                                  <div class="order-table__quantity align-left js-quantity"> </div>
+                                </td>
+                                <td class="order-table__values align-left order-table__price">25 099 ГРН.</td>
+                                <td class="order-table__values align-left order-table__sum">50 198 ГРН.</td>
+                              </tr>
+                            </table>
+                            <div class="order__row">
+                              <div class="order__all-sum"><span class="order__all-sum-text">ИТОГО</span><span class="order__all-sum-value">95 125 ГРН.</span></div>
+                            </div>
+                            <div class="order__row">
+                              <button class="order__submit" type="submit">ОФОРМИТЬ ЗАКАЗ</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="l-main">
+            <div class="l-col1">
+              <div class="sidebar">
+                <div class="s-tabs js-sidebar-tabs">
+                  <ul class="s-tabs__links">
+                    <li class="s-tabs__item js-tabs-item is-active"><a class="s-tabs__link" href="" title="">Каталог</a></li>
+                    <li class="s-tabs__item js-tabs-item"><a class="s-tabs__link" href="" title="">Фильтры</a></li>
+                  </ul>
+                  <div class="s-tabs__body js-scroll-sidebar">
+                    <div class="s-tabs__content js-tabs-content">
+                      <div class="s-filters">
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Смартфоны</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop">
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Наушники</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Экшн-камеры</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Электротранспорт</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
+                          </ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Планшеты </span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop">
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Наушники</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Экшн-камеры</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Электротранспорт</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
+                          </ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Пункт меню</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop">
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Наушники</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Экшн-камеры</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">Электротранспорт</a></li>
+                            <li class="s-filter__item"><a class="s-filter__link" href="" title="">VR очки</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="s-tabs__content js-tabs-content">
+                      <div class="s-filters">
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Модель</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop">
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Apple iPhone 7</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Apple iPhone 7 Plus</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Doogee X5 Max/X5 Max Pro</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Doogee X5/X5s/X5 Pro</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Huawei Y6 II</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Huawei Y5II</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Huawei Honor 5C</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Huawei P9</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Lenovo A1000</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Lenovo A2010</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Lenovo Vibe C</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Meizu M3s</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Meizu MX6</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Meizu M3 Note</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Meizu M3</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Meizu PRO 6</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung Galaxy A3 2016</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung Galaxy A5 2016</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung Galaxy A7 2016</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung Galaxy J1 2016</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung Galaxy J1 mini 2016</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung Galaxy J3 2016</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung Galaxy J5 2016</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung Galaxy J7 2016</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung Galaxy S7 edge G935</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung Galaxy S7 G930</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Xiaomi Redmi 3s/3 Pro</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Xiaomi Redmi Note 3</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Xiaomi Mi Max</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Xiaomi Mi5</span>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Производитель</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop">
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Apple</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">DIGI</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Doogee</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Golla</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">HTC</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Lenovo</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">LG</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Melkco</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Nillkin</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Nokia</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">ODOYO</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Ozaki</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">RED POINT</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Samsung</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">SGP</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">SOX</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">Tucano</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">VOIA</span>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="s-filter">
+                          <div class="s-filter__title js-nav-link"> <span>Сортировать</span><span class="s-filter__arrow icon-chevron"></span></div>
+                          <ul class="s-filter__list js-navdrop">
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">по популярности</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">только новинки</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">от дешевых к дорогим</span>
+                              </label>
+                            </li>
+                            <li class="s-filter__item s-filter__checkbox">
+                              <label class="checkbox">
+                                <input type="checkbox"><span class="checkbox__text">от дорогих к дешевым</span>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div><a class="price-list" href="" title=""><span class="price-list__img icon-price"></span><span class="price-list__title">Скачать прайс-лист</span></a>
+              </div>
+            </div>
+            <div class="l-col2">
+              <section class="content-section">
+                <h2 class="title-h2">История заказов</h2>
+              </section>
+              <div class="order-table order-table_orders">
+                <table>
+                  <tr> 
+                    <th class="order-table__thead align-left" data-col-1>Заказ</th>
+                    <th class="order-table__thead align-left" data-col-2>Дата создания</th>
+                    <th class="order-table__thead align-left" data-col-3>Получатель</th>
+                    <th class="order-table__thead align-left" data-col-4>Сумма</th>
+                    <th class="order-table__thead align-left" data-col-5>Статус</th>
+                  </tr>
+                  <tr class="js-tab-parent is-active">
+                    <td colspan="5">
+                      <table class="order-table__order-code order-table_orders">
+                        <tr class="order-table__row">
+                          <td data-col-1>
+                            <div class="order-table__order-code order-table__values">353 807</div>
+                          </td>
+                          <td class="align-left" data-col-2>
+                            <div class="order-table__values order-table__order-date">21.04.2017 15:43</div>
+                          </td>
+                          <td class="align-left" data-col-3>
+                            <div class="order-table__values order-table__order-date js-toggle-item">Буряк Максим Владимирович</div>
+                          </td>
+                          <td class="order-table__values align-left order-table__order-sum" data-col-4>$253.00</td>
+                          <td class="order-table__values align-left order-table__order-status" data-col-5> <span class="icon-status"></span><span>Принят</span></td>
+                        </tr>
+                      </table>
+                      <div class="order-details js-toggle-drop">
+                        <div class="order-more">
+                          <div class="order-more__part">
+                            <div class="order-more__part-info">ГОРОД: ДНЕПРОПЕТРОВСК</div>
+                            <div class="order-more__part-info">ДОСТАВКА: САМОВЫВОЗ</div>
+                          </div>
+                          <div class="order-more__part">
+                            <div class="order-more__part-info">АДРЕС: ДНЕПР ГЛАВНЫЙ</div>
+                            <div class="order-more__part-info">ОПЛАТА: ОТСРОЧКА</div>
+                          </div>
+                        </div>
+                        <div class="order">
+                          <table class="order-table order-table_4x-col">
+                            <tr>
+                              <th class="order-table__thead" data-col-1>Код товара</th>
+                              <th class="order-table__thead" data-col-2>НАЗВАНИЕ</th>
+                              <th class="order-table__thead align-left" data-col-3>КОЛ-ВО</th>
+                              <th class="order-table__thead align-left" data-col-4>ЦЕНА</th>
+                            </tr>
+                            <tr>
+                              <td class="order-table__values align-left order-table__product-code" data-col-1>059226</td>
+                              <td class="align-left" data-col-2>
+                                <div class="order-table__desc">
+                                  <div class="order-table__desc-title"> GoodRAM CX300 120GB 2.5'' (SSDPR-CX300-120)</div>
+                                </div>
+                              </td>
+                              <td class="order-table__values align-left order-table__quantity" data-col-3>25 099 ГРН.</td>
+                              <td class="order-table__values align-left order-table__price" data-col-4>50 198 ГРН.</td>
+                            </tr>
+                            <tr>
+                              <td class="order-table__values align-left order-table__product-code" data-col-1>059226</td>
+                              <td class="align-left" data-col-2>
+                                <div class="order-table__desc">
+                                  <div class="order-table__desc-title"> Samsung Galaxy J1 Duos J120H Gold </div>
+                                </div>
+                              </td>
+                              <td class="order-table__values align-left order-table__quantity" data-col-3>25 099 ГРН.</td>
+                              <td class="order-table__values align-left order-table__price" data-col-4>50 198 ГРН.</td>
+                            </tr>
+                            <tr>
+                              <td class="order-table__values align-left order-table__product-code" data-col-1>059226</td>
+                              <td class="align-left" data-col-2>
+                                <div class="order-table__desc">
+                                  <div class="order-table__desc-title"> Silicon Power microSDXC 64GB Class 10 UHS-I Elite COLOR (с адап</div>
+                                </div>
+                              </td>
+                              <td class="order-table__values align-left order-table__quantity" data-col-3>25 099 ГРН.</td>
+                              <td class="order-table__values align-left order-table__price" data-col-4>50 198 ГРН.</td>
+                            </tr>
+                            <tr>
+                              <td class="order-table__values align-left order-table__product-code" data-col-1>059226</td>
+                              <td class="align-left" data-col-2>
+                                <div class="order-table__desc">
+                                  <div class="order-table__desc-title">Team microSDXC 64GB Class 10 (с адаптером) (TUSDX64GUHS03) </div>
+                                </div>
+                              </td>
+                              <td class="order-table__values align-left order-table__quantity" data-col-3>25 099 ГРН.</td>
+                              <td class="order-table__values align-left order-table__price" data-col-4>50 198 ГРН.</td>
+                            </tr>
+                            <tr>
+                              <td class="align-right" colspan="3">
+                                <div class="order-table__text">ДОСТАВКА</div>
+                              </td>
+                              <td>
+                                <div class="order-table__values">$0</div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="align-right" colspan="3">
+                                <div class="order-table__text">ИТОГО</div>
+                              </td>
+                              <td>
+                                <div class="order-table__values">$3232</div>
+                              </td>
+                            </tr>
+                          </table>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="container">
+          <div class="footer-company"><a class="footer-company__link" href=""> <span class="footer-company__copy">&#169;</span><span>BUSINESS.SMARTS.UA</span></a></div>
+        </div>
+      </div>
+    </div>
+    <!--END out-->
+  </body>
+</html>

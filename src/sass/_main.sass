@@ -275,13 +275,61 @@
         border-radius: 6px
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.33)
         border: 1px solid #ddd 
+    &.order-table_orders
+        table  
+            table-layout: auto 
+            text-align: left
+        th[data-col-1],
+        td[data-col-1]
+            width: 15% 
+
+        th[data-col-2],
+        td[data-col-2]
+            width: 20% 
+
+        th[data-col-3],
+        td[data-col-3]
+            width: 35% 
+
+        th[data-col-4],
+        td[data-col-4]
+            width: 15% 
+
+        th[data-col-5],
+        td[data-col-5]
+            width: 15%
+        .is-active 
+            .order-table td
+                border-bottom: none
+    &.order-table_4x-col
+        td
+            padding: 5px 
+        tr
+            &:first-child
+                td 
+                    padding-top: 10px 
+        th[data-col-1],
+        td[data-col-1]
+            width: 15% 
+
+        th[data-col-2],
+        td[data-col-2]
+            width: 50% 
+
+        th[data-col-3],
+        td[data-col-3]
+            width: 20% 
+
+        th[data-col-4],
+        td[data-col-4]
+            width: 15% 
+        .order-table__thead
+            text-transform: uppercase
     &__thead
         padding: 10px 0
         background-color: #f4f4f4
         color: #333
         font-size: 10px
-        &.align-left
-            text-align: left
         &:first-child
             border-radius: 4px 0 0 4px
         &:last-child
@@ -301,8 +349,7 @@
     td
         vertical-align: middle
         border-bottom: 1px solid #f4f4f4
-        &.align-left
-            text-align: left
+
     th[data-col-1],
     td[data-col-1]
         width: 9% 
@@ -328,9 +375,36 @@
     td[data-col-6]
         width: 10% 
         padding-right: 20px
+    &__values
+        color: #333
+        font-size: 13px
+        +bold
+    &__order-code
+        color: #cc2b23
+    &__desc-title
+        color: #333
+        font-size: 13px
+        +bold
+        text-transform: uppercase
 
+.align-left
+    text-align: left
+
+.order-more
+    margin-bottom: 5px
+    &__part
+        display: inline-block
+        max-width: 300px 
+        width: 100% 
+        padding: 10px 0
+    &__part-info
+        color: #333
+        font-size: 16px
+        +bold 
 .product-info
     width: 100% 
+    &.order-table_orders
+
     &__img-wrap 
         margin: 0 auto 
         height: 47px 

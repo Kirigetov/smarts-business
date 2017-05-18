@@ -1,0 +1,304 @@
+extends _layout
+
+block title
+      title Личный кабинет
+
+block content
+
+  .main-container
+    .header-container
+      .container
+        //- begin header
+        .header.js-header
+          .header__section.header__section_left
+            .header__logo.logo
+              a(href='', title='')
+                img(src='img/logo-business.png', alt='logo')
+            .header__menu
+              nav.nav
+                .nav__item
+                  a.nav__link.js-toggle-item(href='', title='') 
+                    span.nav__link-img.icon-manager
+                    span.nav__link-text ВАШ МЕНЕДЖЕР
+                  .nav__dropdown.js-toggle-drop
+                    ul.sub-nav
+                      li.sub-nav__item
+                        span.sub-nav__type Имя: 
+                        span.sub-nav__data Греков Роман 
+                      li.sub-nav__item
+                        span.sub-nav__type Телефон: 
+                        span.sub-nav__data 0669263171
+                      li.sub-nav__item
+                        span.sub-nav__type E-mail: 
+                        span.sub-nav__data r.grekov@telemart.com.ua 
+                      li.sub-nav__item
+                        span.sub-nav__type Skype: 
+                        span.sub-nav__data g.r.e.c.h.a 
+                .nav__item
+                  a.nav__link.js-toggle-item(href='', title='') 
+                    span.nav__link-img.icon-dollar
+                    span.nav__link-text ФИНАНСЫ
+                  .nav__dropdown.js-toggle-drop
+                    ul.sub-nav
+                      li.sub-nav__item
+                        span.sub-nav__type Курс USD: 
+                        span.sub-nav__data.sub-nav__data_bold 26.80/26.80
+                      li.sub-nav__item
+                        span.sub-nav__type Сверка: 
+                        a.sub-nav__link(href='', title='') скачать
+                .nav__item
+                  a.nav__link.js-toggle-item(href='', title='') 
+                    span.nav__link-img.icon-cabinet
+                    span.nav__link-text МОЙ КАБИНЕТ
+                  .nav__dropdown.js-toggle-drop
+                    ul.sub-nav
+                      li.sub-nav__item
+                        a.sub-nav__link(href='', title='') Буряк М.В.
+                      li.sub-nav__item
+                        a.sub-nav__link(href='', title='') Мои заказы
+                    a.nav__dropdown-exit(href='', title='') 
+                      span Выйти
+                      span.icon-exit
+
+          .header__section.header__section_right
+            .header__search
+              form.search
+                button(type='button').search__btn.icon-search search
+                input.search__input(type='text', placeholder='Поиск...') 
+
+            .header__basket
+              .basket
+                .basket__btn.js-drop-popup
+                .basket__row.basket__row_mb
+                  .basket__img.icon-bag
+                  .basket__value 2 позиции 
+                .basket__row
+                  .basket__sum 93 939 грн.
+
+                .popup-bl.popup-bl-basket.w776.js-toggle-drop
+                  .popup-bl__inner
+                    .popup-bl__head
+                      .popup-bl__title Состав Вашего заказа
+                      .popup-bl__user.user-auth
+                        .user-auth__img
+                          img(src='img/user.png', title='')
+                        .user-auth__text
+                          span Вы зашли как: 
+                          a.user-auth__link(href='', title='') Буряк М.В.
+                    .popup-bl__body
+                      .order
+                        table.order-table
+                          tr
+                            th.order-table__thead ФОТО
+                            th.order-table__thead НАЗВАНИЕ / КОД
+                            th.order-table__thead.align-left КОЛ-ВО
+                            th.order-table__thead.align-left ЦЕНА
+                            th.order-table__thead.align-left ИТОГО 
+                          tr
+                            td
+                              .order-table__img-wrap
+                                img(src='img/product.jpg', alt='')
+                            td.align-left
+                              .order-table__desc
+                                a.order-table__desc-title(href='', title='') ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE
+                                .order-table__desc-info КОД ТОВАРА: TLG12345
+                            td.align-left
+                              .order-table__quantity.align-left.js-quantity 
+                            td.order-table__values.align-left.order-table__price 25 099 ГРН.
+                            td.order-table__values.align-left.order-table__sum 50 198 ГРН.
+                          tr
+                            td
+                              .order-table__img-wrap
+                                img(src='img/product.jpg', alt='')
+                            td.align-left
+                              .order-table__desc
+                                a.order-table__desc-title(href='', title='') ALCATEL ONE TOUCH 1035D DUAL SIM PURE WHITE
+                                .order-table__desc-info КОД ТОВАРА: TLG12345
+                            td.align-left
+                              .order-table__quantity.align-left.js-quantity 
+                            td.order-table__values.align-left.order-table__price 25 099 ГРН.
+                            td.order-table__values.align-left.order-table__sum 50 198 ГРН.
+
+                        .order__row
+                          .order__all-sum
+                            span.order__all-sum-text ИТОГО
+                            span.order__all-sum-value 95 125 ГРН.
+
+                        .order__row
+                            button.order__submit(type='submit') ОФОРМИТЬ ЗАКАЗ
+
+    .container
+      .l-main
+        .l-col1
+          .sidebar
+            .s-tabs.js-sidebar-tabs
+              ul.s-tabs__links
+                li.s-tabs__item.js-tabs-item.is-active
+                  a.s-tabs__link(href='', title='') Каталог
+                li.s-tabs__item.js-tabs-item
+                  a.s-tabs__link(href='', title='') Фильтры
+              .s-tabs__body.js-scroll-sidebar
+                .s-tabs__content.js-tabs-content
+                  .s-filters
+                    .s-filter
+                      .s-filter__title.js-nav-link 
+                        span Смартфоны
+                        span.s-filter__arrow.icon-chevron
+                      ul.s-filter__list.js-navdrop
+                        - var values = [ "VR очки", "Наушники", "Экшн-камеры", "Электротранспорт",  "VR очки" ]
+                        each item in values
+                          li.s-filter__item
+                           a.s-filter__link(href='', title='')= item
+                    .s-filter
+                      .s-filter__title.js-nav-link 
+                        span Планшеты 
+                        span.s-filter__arrow.icon-chevron
+                      ul.s-filter__list.js-navdrop
+                        - var values = [ "VR очки", "Наушники", "Экшн-камеры", "Электротранспорт",  "VR очки" ]
+                        each item in values
+                          li.s-filter__item
+                           a.s-filter__link(href='', title='')= item
+                    .s-filter
+                      .s-filter__title.js-nav-link 
+                        span Пункт меню
+                        span.s-filter__arrow.icon-chevron
+                      ul.s-filter__list.js-navdrop
+                        - var values = [ "VR очки", "Наушники", "Экшн-камеры", "Электротранспорт",  "VR очки" ]
+                        each item in values
+                          li.s-filter__item
+                           a.s-filter__link(href='', title='')= item
+
+                .s-tabs__content.js-tabs-content
+                  .s-filters
+                    .s-filter
+                      .s-filter__title.js-nav-link  
+                        span Модель
+                        span.s-filter__arrow.icon-chevron
+                      ul.s-filter__list.js-navdrop
+                        - var values = [ "Apple iPhone 7", "Apple iPhone 7 Plus", "Doogee X5 Max/X5 Max Pro", "Doogee X5/X5s/X5 Pro", "Huawei Y6 II", "Huawei Y5II", "Huawei Honor 5C", "Huawei P9", "Lenovo A1000", "Lenovo A2010", "Lenovo Vibe C", "Meizu M3s", "Meizu MX6", "Meizu M3 Note", "Meizu M3", "Meizu PRO 6", "Samsung Galaxy A3 2016", "Samsung Galaxy A5 2016", "Samsung Galaxy A7 2016", "Samsung Galaxy J1 2016", "Samsung Galaxy J1 mini 2016", "Samsung Galaxy J3 2016", "Samsung Galaxy J5 2016", "Samsung Galaxy J7 2016", "Samsung Galaxy S7 edge G935", "Samsung Galaxy S7 G930", "Xiaomi Redmi 3s/3 Pro", "Xiaomi Redmi Note 3", "Xiaomi Mi Max", "Xiaomi Mi5" ]
+                        each item in values
+                          li.s-filter__item.s-filter__checkbox
+                            label.checkbox
+                              input(type="checkbox")
+                              span.checkbox__text= item
+                    .s-filter
+                      .s-filter__title.js-nav-link  
+                        span Производитель
+                        span.s-filter__arrow.icon-chevron
+                      ul.s-filter__list.js-navdrop
+                        - var values = [ "Apple", "DIGI", "Doogee", "Golla", "HTC", "Lenovo", "LG", "Melkco", "Nillkin", "Nokia", "ODOYO", "Ozaki", "RED POINT", "Samsung", "SGP", "SOX", "Tucano", "VOIA" ]
+                        each item in values
+                          li.s-filter__item.s-filter__checkbox
+                            label.checkbox
+                              input(type="checkbox")
+                              span.checkbox__text= item
+                    .s-filter
+                      .s-filter__title.js-nav-link  
+                        span Сортировать
+                        span.s-filter__arrow.icon-chevron
+                      ul.s-filter__list.js-navdrop
+                        - var values = [ "по популярности", "только новинки", "от дешевых к дорогим", "от дорогих к дешевым" ]
+                        each item in values
+                          li.s-filter__item.s-filter__checkbox
+                            label.checkbox
+                              input(type="checkbox")
+                              span.checkbox__text= item
+            a.price-list(href='', title='')
+              span.price-list__img.icon-price
+              span.price-list__title Скачать прайс-лист
+
+        .l-col2
+          section.content-section
+            h2.title-h2 История заказов
+
+          .order-table.order-table_orders
+            table
+              tr 
+                th(data-col-1).order-table__thead.align-left Заказ
+                th(data-col-2).order-table__thead.align-left Дата создания
+                th(data-col-3).order-table__thead.align-left Получатель
+
+                th(data-col-4).order-table__thead.align-left Сумма
+
+                th(data-col-5).order-table__thead.align-left Статус
+
+              tr.js-tab-parent.is-active
+                td(colspan='5')
+                  table.order-table__order-code.order-table_orders
+                    tr.order-table__row
+                      td(data-col-1)
+                        .order-table__order-code.order-table__values 353 807
+                      td(data-col-2).align-left
+                        .order-table__values.order-table__order-date 21.04.2017 15:43
+                      td(data-col-3).align-left
+                        .order-table__values.order-table__order-date.js-toggle-item Буряк Максим Владимирович
+                      td(data-col-4).order-table__values.align-left.order-table__order-sum $253.00
+                      td(data-col-5).order-table__values.align-left.order-table__order-status 
+                        span.icon-status
+                        span Принят
+
+                  .order-details.js-toggle-drop
+
+                    .order-more
+                      .order-more__part
+                        .order-more__part-info ГОРОД: ДНЕПРОПЕТРОВСК
+                        .order-more__part-info ДОСТАВКА: САМОВЫВОЗ
+                      .order-more__part
+                        .order-more__part-info АДРЕС: ДНЕПР ГЛАВНЫЙ
+                        .order-more__part-info ОПЛАТА: ОТСРОЧКА
+
+                    .order
+                      table.order-table.order-table_4x-col
+                        tr
+                          th(data-col-1).order-table__thead Код товара
+                          th(data-col-2).order-table__thead НАЗВАНИЕ
+                          th(data-col-3).order-table__thead.align-left КОЛ-ВО
+                          th(data-col-4).order-table__thead.align-left ЦЕНА
+                        tr
+                          td(data-col-1).order-table__values.align-left.order-table__product-code 059226
+                          td(data-col-2).align-left
+                            .order-table__desc
+                              .order-table__desc-title  GoodRAM CX300 120GB 2.5'' (SSDPR-CX300-120)
+                          td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
+                          td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
+
+                        tr
+                          td(data-col-1).order-table__values.align-left.order-table__product-code 059226
+                          td(data-col-2).align-left
+                            .order-table__desc
+                              .order-table__desc-title  Samsung Galaxy J1 Duos J120H Gold 
+                          td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
+                          td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
+
+                        tr
+                          td(data-col-1).order-table__values.align-left.order-table__product-code 059226
+                          td(data-col-2).align-left
+                            .order-table__desc
+                              .order-table__desc-title  Silicon Power microSDXC 64GB Class 10 UHS-I Elite COLOR (с адап
+                          td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
+                          td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
+
+                        tr
+                          td(data-col-1).order-table__values.align-left.order-table__product-code 059226
+                          td(data-col-2).align-left
+                            .order-table__desc
+                              .order-table__desc-title Team microSDXC 64GB Class 10 (с адаптером) (TUSDX64GUHS03) 
+                          td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
+                          td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
+                        tr
+                          td(colspan='3').align-right
+                            .order-table__text ДОСТАВКА
+                          td
+                            .order-table__values $0
+                        tr
+                          td(colspan='3').align-right
+                            .order-table__text ИТОГО
+                          td
+                            .order-table__values $3232
+
+  .footer
+    .container
+      .footer-company
+        a.footer-company__link(href='') 
+          span.footer-company__copy &#169;
+          span BUSINESS.SMARTS.UA
