@@ -313,11 +313,12 @@
 .order-table
     margin-bottom: 15px
     +clr
-    &_prod-list
+    &_border
         border-radius: 6px
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.33)
         border: 1px solid #ddd 
     &.order-table_orders
+        padding-bottom: 20px
         table  
             table-layout: auto 
             text-align: left
@@ -331,7 +332,7 @@
 
         th[data-col-3],
         td[data-col-3]
-            width: 35% 
+            width: 30% 
 
         th[data-col-4],
         td[data-col-4]
@@ -339,17 +340,17 @@
 
         th[data-col-5],
         td[data-col-5]
-            width: 15%
+            width: 20%
+            text-align: center
         .is-active 
             .order-table td
                 border-bottom: none
     &.order-table_4x-col
+        margin-bottom: 0
         td
             padding: 5px 
-        tr
-            &:first-child
-                td 
-                    padding-top: 10px 
+            vertical-align: top
+
         th[data-col-1],
         td[data-col-1]
             width: 15% 
@@ -367,11 +368,29 @@
             width: 15% 
         .order-table__thead
             text-transform: uppercase
+
+    table
+        table-layout: fixed
+    table
+        width: 100% 
+    td[colspan]
+        padding: 0
+    th
+        height: 34px
+        line-height: 34px
+        padding: 0 5px 
+    td
+        padding: 10px 5px
+    td
+        vertical-align: middle
+        border-bottom: 1px solid #f4f4f4
+
     &__thead
         padding: 10px 0
         background-color: #f4f4f4
         color: #333
         font-size: 10px
+        text-transform: uppercase
         &:first-child
             border-radius: 4px 0 0 4px
         &:last-child
@@ -405,22 +424,19 @@
         color: #333
         font-size: 13px
         +bold
-
         
-    table
-        width: 100% 
-        table-layout: fixed 
-    th
-        height: 34px
-        line-height: 34px
-        padding: 0 5px 
-    td
-        padding: 10px 5px
-    td[colspan]
-        padding: 0
-    td
-        vertical-align: middle
-        border-bottom: 1px solid #f4f4f4
+    &__row
+        &_big
+            td
+                padding: 30px 5px 
+
+    &__order-status
+        position: relative
+        span 
+            display: inline-block
+            vertical-align: middle
+            &:last-child
+                margin-left: 10px 
 
     th[data-col-1],
     td[data-col-1]
@@ -458,9 +474,60 @@
         font-size: 13px
         +bold
         text-transform: uppercase
+    &__total
+        +bold
+        color: #333
+        font-size: 16px
+        text-transform: uppercase
+        .order-table__text
+            padding-right: 40px
+    .order-table__border_padt
+        padding: 10px 5px 0!important
+        border-top: 1px solid #f4f4f4
+    .order-table__border_padb
+        padding: 0 5px 10px!important
+        border-bottom: 1px solid #f4f4f4
 
 .align-left
     text-align: left
+
+.align-right
+    text-align: right
+
+.order-details
+    position: relative
+    padding: 0 20px
+    .is-active &
+        padding: 20px 20px 0 
+    &__btn
+        position: absolute
+        top: 0
+        left: 50%
+        padding: 5px 10px 5px 25px 
+        transform: translate(-50%, -50%)
+        border-radius: 10px
+        background-color: #949494
+        text-transform: uppercase
+        font-size: 9px
+        +bold
+        color: #FFF 
+        overflow: hidden
+        &:before
+            content: "" 
+            position: absolute
+            top: 8px
+            left: 5px
+            +s('nav-down')
+            z-index: 1 
+        &:after
+            content: "" 
+            position: absolute
+            top: 0
+            left: 0
+            bottom: 0
+            background-color: #737373
+            width: 20px 
+
 
 .order-more
     margin-bottom: 5px
@@ -640,3 +707,15 @@
         a
             color: #fff
             background-color: #cc2b23
+
+.icon-status
+
+
+.icon-status-accepted
+    +s('status-accepted')
+.icon-status-done
+    +s('status-done')
+.icon-status-cansel
+    +s('status-cansel')
+.icon-status-confirm
+    +s('status-confirm')

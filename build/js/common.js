@@ -109,7 +109,7 @@ $(document).ready(function() {
                 allTabsContent.slideUp();
             }
 
-        $('.js-toggle-item').click(function(e) {
+        $('.js-toggle-item, .js-toggle-btn').click(function(e) {
             
             e.preventDefault();
 
@@ -124,6 +124,11 @@ $(document).ready(function() {
                 sliderNav = parentTab.find('.js-detail-img-thumb'),
                 arrowPrev = parentTab.find('.detail-features__arrow_prev'),
                 arrowNext = parentTab.find('.detail-features__arrow_next');
+
+            const dataText = _this.data('text');
+            let textTmp = _this.text();
+            _this.text(dataText);
+            _this.data('text',textTmp);
 
             siblingsTab.find( $('.js-toggle-drop') ).slideUp()
                                                     .removeClass(active);

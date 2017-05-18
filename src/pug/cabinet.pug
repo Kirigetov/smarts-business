@@ -132,11 +132,11 @@ block content
         .l-col1
           .sidebar
             .s-tabs.js-sidebar-tabs
-              ul.s-tabs__links
-                li.s-tabs__item.js-tabs-item.is-active
-                  a.s-tabs__link(href='', title='') Каталог
+              ul.s-tabs__links.s-tabs__links_w-auto
                 li.s-tabs__item.js-tabs-item
-                  a.s-tabs__link(href='', title='') Фильтры
+                  a.s-tabs__link(href='', title='') Каталог
+                li.s-tabs__item.js-tabs-item.is-active
+                  a.s-tabs__link(href='', title='') ЛИЧНЫЙ КАБИНЕТ
               .s-tabs__body.js-scroll-sidebar
                 .s-tabs__content.js-tabs-content
                   .s-filters
@@ -172,37 +172,22 @@ block content
                   .s-filters
                     .s-filter
                       .s-filter__title.js-nav-link  
-                        span Модель
+                        span Личная информация
                         span.s-filter__arrow.icon-chevron
                       ul.s-filter__list.js-navdrop
-                        - var values = [ "Apple iPhone 7", "Apple iPhone 7 Plus", "Doogee X5 Max/X5 Max Pro", "Doogee X5/X5s/X5 Pro", "Huawei Y6 II", "Huawei Y5II", "Huawei Honor 5C", "Huawei P9", "Lenovo A1000", "Lenovo A2010", "Lenovo Vibe C", "Meizu M3s", "Meizu MX6", "Meizu M3 Note", "Meizu M3", "Meizu PRO 6", "Samsung Galaxy A3 2016", "Samsung Galaxy A5 2016", "Samsung Galaxy A7 2016", "Samsung Galaxy J1 2016", "Samsung Galaxy J1 mini 2016", "Samsung Galaxy J3 2016", "Samsung Galaxy J5 2016", "Samsung Galaxy J7 2016", "Samsung Galaxy S7 edge G935", "Samsung Galaxy S7 G930", "Xiaomi Redmi 3s/3 Pro", "Xiaomi Redmi Note 3", "Xiaomi Mi Max", "Xiaomi Mi5" ]
-                        each item in values
-                          li.s-filter__item.s-filter__checkbox
-                            label.checkbox
-                              input(type="checkbox")
-                              span.checkbox__text= item
+                       
                     .s-filter
                       .s-filter__title.js-nav-link  
-                        span Производитель
+                        span История заказов
                         span.s-filter__arrow.icon-chevron
                       ul.s-filter__list.js-navdrop
-                        - var values = [ "Apple", "DIGI", "Doogee", "Golla", "HTC", "Lenovo", "LG", "Melkco", "Nillkin", "Nokia", "ODOYO", "Ozaki", "RED POINT", "Samsung", "SGP", "SOX", "Tucano", "VOIA" ]
-                        each item in values
-                          li.s-filter__item.s-filter__checkbox
-                            label.checkbox
-                              input(type="checkbox")
-                              span.checkbox__text= item
+                        
                     .s-filter
                       .s-filter__title.js-nav-link  
-                        span Сортировать
+                        span Сверка
                         span.s-filter__arrow.icon-chevron
                       ul.s-filter__list.js-navdrop
-                        - var values = [ "по популярности", "только новинки", "от дешевых к дорогим", "от дорогих к дешевым" ]
-                        each item in values
-                          li.s-filter__item.s-filter__checkbox
-                            label.checkbox
-                              input(type="checkbox")
-                              span.checkbox__text= item
+                       img(src="img/calendar.png", alt="")
             a.price-list(href='', title='')
               span.price-list__img.icon-price
               span.price-list__title Скачать прайс-лист
@@ -211,7 +196,7 @@ block content
           section.content-section
             h2.title-h2 История заказов
 
-          .order-table.order-table_orders
+          .order-table.order-table_border.order-table_orders
             table
               tr 
                 th(data-col-1).order-table__thead.align-left Заказ
@@ -222,79 +207,333 @@ block content
 
                 th(data-col-5).order-table__thead.align-left Статус
 
-              tr.js-tab-parent.is-active
+              tr.js-tab-parent
                 td(colspan='5')
                   table.order-table__order-code.order-table_orders
-                    tr.order-table__row
+                    tr.order-table__row.order-table__row_big
                       td(data-col-1)
                         .order-table__order-code.order-table__values 353 807
                       td(data-col-2).align-left
                         .order-table__values.order-table__order-date 21.04.2017 15:43
                       td(data-col-3).align-left
-                        .order-table__values.order-table__order-date.js-toggle-item Буряк Максим Владимирович
+                        .order-table__values.order-table__order-date.js-toggle-block Буряк Максим Владимирович
                       td(data-col-4).order-table__values.align-left.order-table__order-sum $253.00
                       td(data-col-5).order-table__values.align-left.order-table__order-status 
-                        span.icon-status
+                        span.icon-status.icon-status-accepted
                         span Принят
 
-                  .order-details.js-toggle-drop
+                  .order-details
+                    button.order-details__btn.js-toggle-btn(data-text='Свернуть') Развернуть
+                    .order-details__inner.js-toggle-drop(style='display:none')
+                      .order-more
+                        .order-more__part
+                          .order-more__part-info ГОРОД: ДНЕПРОПЕТРОВСК
+                          .order-more__part-info ДОСТАВКА: САМОВЫВОЗ
+                        .order-more__part
+                          .order-more__part-info АДРЕС: ДНЕПР ГЛАВНЫЙ
+                          .order-more__part-info ОПЛАТА: ОТСРОЧКА
 
-                    .order-more
-                      .order-more__part
-                        .order-more__part-info ГОРОД: ДНЕПРОПЕТРОВСК
-                        .order-more__part-info ДОСТАВКА: САМОВЫВОЗ
-                      .order-more__part
-                        .order-more__part-info АДРЕС: ДНЕПР ГЛАВНЫЙ
-                        .order-more__part-info ОПЛАТА: ОТСРОЧКА
+                      .order
+                        table.order-table.order-table_4x-col
+                          tr
+                            th(data-col-1).order-table__thead Код товара
+                            th(data-col-2).order-table__thead НАЗВАНИЕ
+                            th(data-col-3).order-table__thead.align-left КОЛ-ВО
+                            th(data-col-4).order-table__thead.align-left ЦЕНА
+                          tr
+                            td(data-col-1).order-table__values.align-left.order-table__product-code 059226
+                            td(data-col-2).align-left
+                              .order-table__desc
+                                a(href="").order-table__desc-title  GoodRAM CX300 120GB 2.5'' (SSDPR-CX300-120)
+                            td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
+                            td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
 
-                    .order
-                      table.order-table.order-table_4x-col
-                        tr
-                          th(data-col-1).order-table__thead Код товара
-                          th(data-col-2).order-table__thead НАЗВАНИЕ
-                          th(data-col-3).order-table__thead.align-left КОЛ-ВО
-                          th(data-col-4).order-table__thead.align-left ЦЕНА
-                        tr
-                          td(data-col-1).order-table__values.align-left.order-table__product-code 059226
-                          td(data-col-2).align-left
-                            .order-table__desc
-                              .order-table__desc-title  GoodRAM CX300 120GB 2.5'' (SSDPR-CX300-120)
-                          td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
-                          td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
+                          tr
+                            td(data-col-1).order-table__values.align-left.order-table__product-code 059226
+                            td(data-col-2).align-left
+                              .order-table__desc
+                                a(href="").order-table__desc-title  Samsung Galaxy J1 Duos J120H Gold 
+                            td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
+                            td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
 
-                        tr
-                          td(data-col-1).order-table__values.align-left.order-table__product-code 059226
-                          td(data-col-2).align-left
-                            .order-table__desc
-                              .order-table__desc-title  Samsung Galaxy J1 Duos J120H Gold 
-                          td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
-                          td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
+                          tr
+                            td(data-col-1).order-table__values.align-left.order-table__product-code 059226
+                            td(data-col-2).align-left
+                              .order-table__desc
+                                a(href="").order-table__desc-title  Silicon Power microSDXC 64GB Class 10 UHS-I Elite COLOR (с адап
+                            td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
+                            td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
 
-                        tr
-                          td(data-col-1).order-table__values.align-left.order-table__product-code 059226
-                          td(data-col-2).align-left
-                            .order-table__desc
-                              .order-table__desc-title  Silicon Power microSDXC 64GB Class 10 UHS-I Elite COLOR (с адап
-                          td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
-                          td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
+                          tr
+                            td(data-col-1).order-table__values.align-left.order-table__product-code 059226
+                            td(data-col-2).align-left
+                              .order-table__desc
+                                a(href="").order-table__desc-title Team microSDXC 64GB Class 10 (с адаптером) (TUSDX64GUHS03) 
+                            td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
+                            td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
+                          tr
+                            td(colspan='3').order-table__total.order-table__border_padt.align-right
+                              .order-table__text ДОСТАВКА:
+                            td.order-table__total.order-table__border_padt
+                              .order-table__values $0
+                          tr
+                            td(colspan='3').order-table__total.order-table__total.order-table__border_padb.align-right
+                              .order-table__text ИТОГО:
+                            td.order-table__total.order-table__border_padb
+                              .order-table__values $3232
 
-                        tr
-                          td(data-col-1).order-table__values.align-left.order-table__product-code 059226
-                          td(data-col-2).align-left
-                            .order-table__desc
-                              .order-table__desc-title Team microSDXC 64GB Class 10 (с адаптером) (TUSDX64GUHS03) 
-                          td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
-                          td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
-                        tr
-                          td(colspan='3').align-right
-                            .order-table__text ДОСТАВКА
-                          td
-                            .order-table__values $0
-                        tr
-                          td(colspan='3').align-right
-                            .order-table__text ИТОГО
-                          td
-                            .order-table__values $3232
+              tr.js-tab-parent
+                td(colspan='5')
+                  table.order-table__order-code.order-table_orders
+                    tr.order-table__row.order-table__row_big
+                      td(data-col-1)
+                        .order-table__order-code.order-table__values 353 807
+                      td(data-col-2).align-left
+                        .order-table__values.order-table__order-date 21.04.2017 15:43
+                      td(data-col-3).align-left
+                        .order-table__values.order-table__order-date.js-toggle-block Буряк Максим Владимирович
+                      td(data-col-4).order-table__values.align-left.order-table__order-sum $253.00
+                      td(data-col-5).order-table__values.align-left.order-table__order-status 
+                        span.icon-status.icon-status-done
+                        span Принят
+
+                  .order-details
+                    button.order-details__btn.js-toggle-btn(data-text='Свернуть') Развернуть
+                    .order-details__inner.js-toggle-drop(style='display: none')
+                      .order-more
+                        .order-more__part
+                          .order-more__part-info ГОРОД: ДНЕПРОПЕТРОВСК
+                          .order-more__part-info ДОСТАВКА: САМОВЫВОЗ
+                        .order-more__part
+                          .order-more__part-info АДРЕС: ДНЕПР ГЛАВНЫЙ
+                          .order-more__part-info ОПЛАТА: ОТСРОЧКА
+
+                      .order
+                        table.order-table.order-table_4x-col
+                          tr
+                            th(data-col-1).order-table__thead Код товара
+                            th(data-col-2).order-table__thead НАЗВАНИЕ
+                            th(data-col-3).order-table__thead.align-left КОЛ-ВО
+                            th(data-col-4).order-table__thead.align-left ЦЕНА
+                          tr
+                            td(data-col-1).order-table__values.align-left.order-table__product-code 059226
+                            td(data-col-2).align-left
+                              .order-table__desc
+                                a(href="").order-table__desc-title  GoodRAM CX300 120GB 2.5'' (SSDPR-CX300-120)
+                            td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
+                            td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
+
+                          tr
+                            td(data-col-1).order-table__values.align-left.order-table__product-code 059226
+                            td(data-col-2).align-left
+                              .order-table__desc
+                                a(href="").order-table__desc-title  Samsung Galaxy J1 Duos J120H Gold 
+                            td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
+                            td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
+
+                          tr
+                            td(data-col-1).order-table__values.align-left.order-table__product-code 059226
+                            td(data-col-2).align-left
+                              .order-table__desc
+                                a(href="").order-table__desc-title  Silicon Power microSDXC 64GB Class 10 UHS-I Elite COLOR (с адап
+                            td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
+                            td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
+
+                          tr
+                            td(data-col-1).order-table__values.align-left.order-table__product-code 059226
+                            td(data-col-2).align-left
+                              .order-table__desc
+                                a(href="").order-table__desc-title Team microSDXC 64GB Class 10 (с адаптером) (TUSDX64GUHS03) 
+                            td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
+                            td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
+                          tr
+                            td(colspan='3').order-table__total.order-table__border_padt.align-right
+                              .order-table__text ДОСТАВКА:
+                            td.order-table__total.order-table__border_padt
+                              .order-table__values $0
+                          tr
+                            td(colspan='3').order-table__total.order-table__total.order-table__border_padb.align-right
+                              .order-table__text ИТОГО:
+                            td.order-table__total.order-table__border_padb
+                              .order-table__values $3232
+
+              tr.js-tab-parent
+                td(colspan='5')
+                  table.order-table__order-code.order-table_orders
+                    tr.order-table__row.order-table__row_big
+                      td(data-col-1)
+                        .order-table__order-code.order-table__values 353 807
+                      td(data-col-2).align-left
+                        .order-table__values.order-table__order-date 21.04.2017 15:43
+                      td(data-col-3).align-left
+                        .order-table__values.order-table__order-date.js-toggle-block Буряк Максим Владимирович
+                      td(data-col-4).order-table__values.align-left.order-table__order-sum $253.00
+                      td(data-col-5).order-table__values.align-left.order-table__order-status 
+                        span.icon-status.icon-status-cansel
+                        span Принят
+
+                  .order-details
+                    button.order-details__btn.js-toggle-btn(data-text='Свернуть') Развернуть
+                    .order-details__inner.js-toggle-drop(style='display: none')
+                      .order-more
+                        .order-more__part
+                          .order-more__part-info ГОРОД: ДНЕПРОПЕТРОВСК
+                          .order-more__part-info ДОСТАВКА: САМОВЫВОЗ
+                        .order-more__part
+                          .order-more__part-info АДРЕС: ДНЕПР ГЛАВНЫЙ
+                          .order-more__part-info ОПЛАТА: ОТСРОЧКА
+
+                      .order
+                        table.order-table.order-table_4x-col
+                          tr
+                            th(data-col-1).order-table__thead Код товара
+                            th(data-col-2).order-table__thead НАЗВАНИЕ
+                            th(data-col-3).order-table__thead.align-left КОЛ-ВО
+                            th(data-col-4).order-table__thead.align-left ЦЕНА
+                          tr
+                            td(data-col-1).order-table__values.align-left.order-table__product-code 059226
+                            td(data-col-2).align-left
+                              .order-table__desc
+                                a(href="").order-table__desc-title  GoodRAM CX300 120GB 2.5'' (SSDPR-CX300-120)
+                            td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
+                            td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
+
+                          tr
+                            td(data-col-1).order-table__values.align-left.order-table__product-code 059226
+                            td(data-col-2).align-left
+                              .order-table__desc
+                                a(href="").order-table__desc-title  Samsung Galaxy J1 Duos J120H Gold 
+                            td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
+                            td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
+
+                          tr
+                            td(data-col-1).order-table__values.align-left.order-table__product-code 059226
+                            td(data-col-2).align-left
+                              .order-table__desc
+                                a(href="").order-table__desc-title  Silicon Power microSDXC 64GB Class 10 UHS-I Elite COLOR (с адап
+                            td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
+                            td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
+
+                          tr
+                            td(data-col-1).order-table__values.align-left.order-table__product-code 059226
+                            td(data-col-2).align-left
+                              .order-table__desc
+                                a(href="").order-table__desc-title Team microSDXC 64GB Class 10 (с адаптером) (TUSDX64GUHS03) 
+                            td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
+                            td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
+                          tr
+                            td(colspan='3').order-table__total.order-table__border_padt.align-right
+                              .order-table__text ДОСТАВКА:
+                            td.order-table__total.order-table__border_padt
+                              .order-table__values $0
+                          tr
+                            td(colspan='3').order-table__total.order-table__total.order-table__border_padb.align-right
+                              .order-table__text ИТОГО:
+                            td.order-table__total.order-table__border_padb
+                              .order-table__values $3232
+
+              tr.js-tab-parent
+                td(colspan='5')
+                  table.order-table__order-code.order-table_orders
+                    tr.order-table__row.order-table__row_big
+                      td(data-col-1)
+                        .order-table__order-code.order-table__values 353 807
+                      td(data-col-2).align-left
+                        .order-table__values.order-table__order-date 21.04.2017 15:43
+                      td(data-col-3).align-left
+                        .order-table__values.order-table__order-date.js-toggle-block Буряк Максим Владимирович
+                      td(data-col-4).order-table__values.align-left.order-table__order-sum $253.00
+                      td(data-col-5).order-table__values.align-left.order-table__order-status 
+                        span.icon-status.icon-status-confirm
+                        span Принят
+
+                  .order-details
+                    button.order-details__btn.js-toggle-btn(data-text='Свернуть') Развернуть
+                    .order-details__inner.js-toggle-drop(style='display: none')
+                      .order-more
+                        .order-more__part
+                          .order-more__part-info ГОРОД: ДНЕПРОПЕТРОВСК
+                          .order-more__part-info ДОСТАВКА: САМОВЫВОЗ
+                        .order-more__part
+                          .order-more__part-info АДРЕС: ДНЕПР ГЛАВНЫЙ
+                          .order-more__part-info ОПЛАТА: ОТСРОЧКА
+
+                      .order
+                        table.order-table.order-table_4x-col
+                          tr
+                            th(data-col-1).order-table__thead Код товара
+                            th(data-col-2).order-table__thead НАЗВАНИЕ
+                            th(data-col-3).order-table__thead.align-left КОЛ-ВО
+                            th(data-col-4).order-table__thead.align-left ЦЕНА
+                          tr
+                            td(data-col-1).order-table__values.align-left.order-table__product-code 059226
+                            td(data-col-2).align-left
+                              .order-table__desc
+                                a(href="").order-table__desc-title  GoodRAM CX300 120GB 2.5'' (SSDPR-CX300-120)
+                            td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
+                            td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
+
+                          tr
+                            td(data-col-1).order-table__values.align-left.order-table__product-code 059226
+                            td(data-col-2).align-left
+                              .order-table__desc
+                                a(href="").order-table__desc-title  Samsung Galaxy J1 Duos J120H Gold 
+                            td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
+                            td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
+
+                          tr
+                            td(data-col-1).order-table__values.align-left.order-table__product-code 059226
+                            td(data-col-2).align-left
+                              .order-table__desc
+                                a(href="").order-table__desc-title  Silicon Power microSDXC 64GB Class 10 UHS-I Elite COLOR (с адап
+                            td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
+                            td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
+
+                          tr
+                            td(data-col-1).order-table__values.align-left.order-table__product-code 059226
+                            td(data-col-2).align-left
+                              .order-table__desc
+                                a(href="").order-table__desc-title Team microSDXC 64GB Class 10 (с адаптером) (TUSDX64GUHS03) 
+                            td(data-col-3).order-table__values.align-left.order-table__quantity 25 099 ГРН.
+                            td(data-col-4).order-table__values.align-left.order-table__price 50 198 ГРН.
+                          tr
+                            td(colspan='3').order-table__total.order-table__border_padt.align-right
+                              .order-table__text ДОСТАВКА:
+                            td.order-table__total.order-table__border_padt
+                              .order-table__values $0
+                          tr
+                            td(colspan='3').order-table__total.order-table__total.order-table__border_padb.align-right
+                              .order-table__text ИТОГО:
+                            td.order-table__total.order-table__border_padb
+                              .order-table__values $3232
+          
+          .pagination-wrap
+            ul.pagination
+              li.pagination__item.pagination__prev
+                a(href="#")
+                  i.icon-arrow-corner
+
+              li.pagination__item
+                a(href="#") 1
+              li.pagination__item
+                a(href="#") 2
+              li.pagination__item
+                a(href="#") 3
+              li.pagination__item
+                a(href="#") 4
+              li.pagination__item.is-active  
+                a(href="#") 5
+              li.pagination__item
+                a(href="#") 6
+              li.pagination__item
+                a(href="#") 7
+              li.pagination__item 
+                a(href="#") 8
+                
+              li.pagination__item.pagination__next
+                a(href="#")
+                  i.icon-arrow-corner
+
 
   .footer
     .container
