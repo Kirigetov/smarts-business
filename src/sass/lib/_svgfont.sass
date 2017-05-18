@@ -5,13 +5,16 @@
 	font-weight: normal
 	font-style: normal
 
-$icon-arrow-down: "\EA01"
-$icon-arrow-left: "\EA02"
-$icon-arrow: "\EA03"
-$icon-envelope: "\EA04"
-$icon-key: "\EA05"
-$icon-stop: "\EA06"
-$icon-sun: "\EA07"
+$icon-arrow-corner: "\EA01"
+$icon-arrow-down: "\EA02"
+$icon-arrow-left: "\EA03"
+$icon-arrow: "\EA04"
+$icon-check: "\EA05"
+$icon-envelope: "\EA06"
+$icon-garbage: "\EA07"
+$icon-key: "\EA08"
+$icon-stop: "\EA09"
+$icon-sun: "\EA0A"
 
 
 %icon
@@ -28,14 +31,20 @@ $icon-sun: "\EA07"
 	@extend %icon
 	display: inline-block
 
+.icon-arrow-corner:before
+	content: $icon-arrow-corner
 .icon-arrow-down:before
 	content: $icon-arrow-down
 .icon-arrow-left:before
 	content: $icon-arrow-left
 .icon-arrow:before
 	content: $icon-arrow
+.icon-check:before
+	content: $icon-check
 .icon-envelope:before
 	content: $icon-envelope
+.icon-garbage:before
+	content: $icon-garbage
 .icon-key:before
 	content: $icon-key
 .icon-stop:before

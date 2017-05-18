@@ -4,7 +4,7 @@
 	margin-bottom: 30px
 
 .s-tabs
-	margin-bottom: 25px
+	margin-bottom: 30px
 	&__links
 		margin-bottom: 10px
 		font-size: 0
@@ -36,10 +36,15 @@
 .s-filter
 	&:not(:first-child)
 		border-top: 1px solid #ecf1f5
+	&:last-child
+		border-bottom: 1px solid #ecf1f5
+
 	&_static	
 		margin-bottom: 20px
 		.s-filter__list
 			display: block
+		.s-filter__title
+			cursor: default
 	&__title
 		position: relative
 		font-size: 14px
@@ -116,6 +121,56 @@
 		right: 20px 
 		margin-top: -1px
 
+.filter-btn-wrap	
+	margin-top: 17px
+	margin-bottom: 0
+	text-align: right
+	border-bottom: 1px solid #ddd
+	padding-bottom: 10px
+	&_center
+		text-align: center
+		border-bottom: none
+	+ .price-list
+		margin-top: 50px
+
+.filter-reset 
+	padding: 0 10px 
+	border-radius: 4px
+	background: none 
+	height: 34px 
+	line-height: 34px
+	color: #b4bfc7
+	transition: background .2s
+	&:hover
+		background: #ECECEC 
+	&__text, &__img
+		vertical-align: middle
+	&__text
+		font-size: 12px 
+		+bold
+	&__img
+		display: inline-block
+		margin-left: 5px 
+		
+.filter-apply
+	margin: 0 auto 
+	padding: 11px 15px 12px
+	background-color: #cc2b23
+	border-radius: 5px
+	color: #FFF 
+	transition: background .2s
+	&__text
+		font-size: 14px
+		+bold
+		text-transform: uppercase
+		vertical-align: middle
+	&__img 
+		display: inline-block
+		margin-right: 10px
+		font-size: 12px
+		vertical-align: middle
+	&:hover
+		background: rgba(#cc2b23, .85) 
 
 .toggle.toggle_pad
 	padding-left: 30px 
@@ -136,6 +191,7 @@
 	background-color: #cc2b23
 	border-radius: 5px
 	text-decoration: none
+	transition: background .2s
 	&__img, &__title
 		vertical-align: middle
 	&__img
@@ -146,8 +202,7 @@
 		+bold
 		text-transform: uppercase
 	&:hover
-		.price-list__title
-			text-decoration: underline
+		background: rgba(#cc2b23, .85) 
 
 .icon-price
 	+s('price')

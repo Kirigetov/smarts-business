@@ -29,12 +29,10 @@
 .image-thumb
 
     &__item 
-        padding: 5px
         background-color: #fff
         margin-bottom: 5px
         height: 70px
         cursor: pointer
-        border: 1px solid #cc2b23
         &:last-child 
             margin-bottom: 0
         img 
@@ -44,12 +42,16 @@
             width: auto
             height: auto
             margin: 0 auto
-
-        &:not(.slick-current)
+        
+        &.slick-slide
             border: 1px solid #ddd
+            
+        &.slick-current
+            border: 1px solid #cc2b23
+            
+        &:not(.slick-current)
             img 
                 opacity: .3
-
         &:hover 
             img 
                 opacity: 1
